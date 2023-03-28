@@ -8,7 +8,7 @@ export default function HomepageFeatures() {
   const {
     siteConfig: {url, baseUrl},
   } = useDocusaurusContext();
-  const domain = `${url}/${baseUrl}`;
+  const domain = `${url}`;
 
   const useCaseSrc = `${domain}/img/usecase_button.png`;
 
