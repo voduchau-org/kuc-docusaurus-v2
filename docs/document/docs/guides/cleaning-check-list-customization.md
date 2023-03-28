@@ -6,7 +6,7 @@ sidebar_label: Cleaning check list customization
 
 ## Overview
 
-This section describes how to customize an app to display components in the Record List page and let the user create a record without opening the Record Create page. It is described using a cleaning check list as an example.<br>
+This section describes how to customize an app to display components in the Record List page and let the user create a record without opening the Record Create page. It is described using a cleaning check list as an example.<br/>
 You can also learn how to transfer values from components to Kintone fields.
 
 
@@ -21,16 +21,16 @@ You can also learn how to transfer values from components to Kintone fields.
 
 The completed image of the customized page is as follows:
 
-![Cleaning Check List](assets/cleaning_check_list.png)
+![Cleaning Check List](../assets/cleaning_check_list.png)
 
 ## JavaScript and CSS customization
 
-Import the UMD file of Kintone UI Component to the app and upload the JavaScript file with the implementation described below.<br>
+Import the UMD file of Kintone UI Component to the app and upload the JavaScript file with the implementation described below.<br/>
 See [Quick Start](../getting-started/quick-start.md) for how to upload a file.
 
 ### Display check list items
 
-Display the check list items labeled as Check Status, Replenishment Item and Cleaning Status on the Record List page of the app.<br>
+Display the check list items labeled as Check Status, Replenishment Item and Cleaning Status on the Record List page of the app.<br/>
 
 Notes:
 - The Checkbox and Dropdown components display the value of Item.value if Item.label is not specified.
@@ -39,11 +39,15 @@ Notes:
   - For this customization, specify 'Done' for value of the RadioButton component and '-----' for value of the Dropdown component as their initial values.
 
 ```javascript
-kintone.events.on('app.record.index.show', (event) => {
+kintone.events.on('app.record.index.show', event => {
 
   // Prevent components duplication bug
-  if (document.getElementById('kuc_radiobutton') || document.getElementById('kuc_checkbox') || document.getElementById('kuc_dropdown')
-    || document.getElementById('kuc_button')) {
+  if (
+    document.getElementById('kuc_radiobutton') ||
+    document.getElementById('kuc_checkbox') ||
+    document.getElementById('kuc_dropdown') ||
+    document.getElementById('kuc_button')
+  ) {
     return event;
   }
 
@@ -130,10 +134,10 @@ Assign a value to the id property of the Button component and adjust the spacing
 
 ### What happens when the Save button is clicked?
 
-You can specify a click event for the Button component.<br>
+You can specify a click event for the Button component.<br/>
 The required items are checked for whether they have values when the Save button is clicked.
 
-If a value is missing for an item, the component should display an error message.<br>
+If a value is missing for an item, the component should display an error message.<br/>
 *The error message should be first initialized with an empty string.
 
 
@@ -159,9 +163,9 @@ button.addEventListener('click', () => {
     return;
   }
 ```
-The record should be created after it is verified that the required items have values.<br>
+The record should be created after it is verified that the required items have values.<br/>
 
-The values of the required items entered on the page can be retrieved using <Component variable name.value>.<br>
+The values of the required items entered on the page can be retrieved using <Component variable name.value>.<br/>
 For this customization, the value entered in each component is retrieved using radiobutton.value, checkbox.value and dropdown.value.
 
 The Notification component displays a message if the record is successfully created and registered.
@@ -172,27 +176,29 @@ The Notification component displays a message if the record is successfully crea
 const postParam = {
   app,
   record: {
-    'status': {
+    status: {
       value: radiobutton.value
-      },
-    'item': {
+    },
+    item: {
       value: checkbox.value
     },
-    'cleaning': {
+    cleaning: {
       value: dropdown.value
     }
   }
 };
 
 // Register record
-kintone.api(kintone.api.url('/k/v1/record', true), 'POST', postParam).then((resp) => {
-  // Display success message
-  const success = new Kuc.Notification({
-    text: 'Registered check items',
-    type: 'success'
+kintone
+  .api(kintone.api.url('/k/v1/record', true), 'POST', postParam)
+  .then(resp => {
+    // Display success message
+    const success = new Kuc.Notification({
+      text: 'Registered check items',
+      type: 'success'
+    });
+    success.open();
   });
-  success.open();
-})
 ```
 
 ### Display error message
@@ -200,7 +206,7 @@ kintone.api(kintone.api.url('/k/v1/record', true), 'POST', postParam).then((resp
 The Notification component displays an error message when an error occurs during the process.
 
 ```javascript
-}).catch((error) => {
+.catch(error => {
   console.log(error);
 
   // Display error message
@@ -215,5 +221,5 @@ The Notification component displays an error message when an error occurs during
 });
 ```
 
-> This article was reviewed using Kintone and Google Chrome as of September, 2021.<br>
+> This article was reviewed using Kintone and Google Chrome as of September, 2021.<br/>
 > The version of Kintone UI Component used in this customization is v1.1.0.

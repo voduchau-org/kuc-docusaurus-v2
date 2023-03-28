@@ -27,12 +27,12 @@ Here is a list of properties that can be used for modifying the component:
 | :--- | :--- | :--- | :--- | :--- |
 | className | string | ""  | Component class name | |
 | text | string | ""  | Text to be displayed | |
-| type | string | "danger"  | Background color | Available options:<br>"danger" : Red (#e74c3c)<br>"info" : Blue (#3498db)<br>"success" : Green (#91c36c) |
-| duration | number | -1  | Milliseconds to close component | Unit is milliseconds<br>You can specify 0 or a number larger than 0<br>If you specify invalid value (a number less than 0 or is not a number), component is opened and will not be closed automatically |
+| type | string | "danger"  | Background color | Available options:<br/>"danger" : Red (#e74c3c)<br/>"info" : Blue (#3498db)<br/>"success" : Green (#91c36c) |
+| duration | number | -1  | Milliseconds to close component | Unit is milliseconds<br/>You can specify 0 or a number larger than 0<br/>If you specify invalid value (a number less than 0 or is not a number), component is opened and will not be closed automatically |
 
 ### Constructor
 
-Notification(options)<br>
+Notification(options)<br/>
 Here is a list of available constructors:
 
 #### Parameter
@@ -81,7 +81,7 @@ Here is a sample code when all parameters are specified:
 const Kuc = Kucs['1.x.x'];
 
 const notification = new Kuc.Notification({
-  text:  'Error occurred!',
+  text: 'Error occurred!',
   type: 'danger',
   className: 'options-class',
   duration: 2000

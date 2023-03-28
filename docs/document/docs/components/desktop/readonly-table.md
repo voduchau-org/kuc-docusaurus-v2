@@ -26,8 +26,8 @@ Here is a list of properties that can be used for modifying the component:
 | className | string | ""  | Component class name | |
 | id | string | ""  | Component id name | |
 | label | string | ""  | Label for the component | Label is not displayed if unspecified or empty |
-| rowsPerPage | number | 5 | Number of table rows per page | Round off to the nearest whole number when the decimal point is set<br>Will result an error if the value of `rowsPerPage` is not a positive integer |
-| pagination | boolean | true | Show/Hide the pagination | If setting `false`, pagination is hidden and all rows are displayed<br>If setting `true`, pagination is displayed and only the number of rows set in `rowsPerPage` are displayed</li></ul> |
+| rowsPerPage | number | 5 | Number of table rows per page | Round off to the nearest whole number when the decimal point is set<br/>Will result an error if the value of `rowsPerPage` is not a positive integer |
+| pagination | boolean | true | Show/Hide the pagination | If setting `false`, pagination is hidden and all rows are displayed<br/>If setting `true`, pagination is displayed and only the number of rows set in `rowsPerPage` are displayed</li></ul> |
 | visible | boolean | true | Show/Hide the component | |
 | columns | Array\<[Column](#column)\> | []  | Column data of the component | Will result an error if the value of `columns` is not an array |
 | data | Array\<object\> | []  | Row data of the component | Will result an error if the value of `data` is not an array |
@@ -35,13 +35,13 @@ Here is a list of properties that can be used for modifying the component:
 #### Column
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| field | string | ""  | Key of the column | It represents the key of the `data` object<br>The value associated with that key will be rendered in the column |
+| field | string | ""  | Key of the column | It represents the key of the `data` object<br/>The value associated with that key will be rendered in the column |
 | title | string | ""  | Header name of the column | |
 | visible | boolean |  true  | Show/Hide the column | |
 
 ### Constructor
 
-ReadOnlyTable(options)<br>
+ReadOnlyTable(options)<br/>
 Here is a list of available constructors:
 
 #### Parameter
@@ -61,28 +61,28 @@ const Kuc = Kucs['1.x.x'];
 
 const space = kintone.app.record.getSpaceElement('space');
 
-const readOnlyTable = new ReadOnlyTable({
+const readOnlyTable = new Kuc.ReadOnlyTable({
   label: 'ReadOnlyTable',
   columns: [
     {
       title: 'Number',
-      field: 'index',
+      field: 'index'
     },
     {
       title: 'City',
-      field: 'name',
+      field: 'name'
     },
     {
       title: 'Country',
-      field: 'country',
+      field: 'country'
     },
     {
       title: 'Population',
-      field: 'population',
+      field: 'population'
     },
     {
       title: 'Coordinates',
-      field: 'coordinates',
+      field: 'coordinates'
     }
   ],
   data: [
@@ -91,28 +91,28 @@ const readOnlyTable = new ReadOnlyTable({
       name: 'HoChiMinh',
       country: 'Vietnam',
       population: '8,371,000',
-      coordinates: '10.762622, 106.660172',
+      coordinates: '10.762622, 106.660172'
     },
     {
       index: '2',
       name: 'Tokyo',
       country: 'Japan',
       population: '14,000,000',
-      coordinates: '35.689487, 139.691711',
+      coordinates: '35.689487, 139.691711'
     },
     {
       index: '3',
       name: 'New York',
       country: 'USA',
       population: '8,400,000',
-      coordinates: '40.712776, -74.005974',
+      coordinates: '40.712776, -74.005974'
     }
   ],
   className: 'sample-class',
   id: 'sample-id',
   visible: true,
   pagination: true,
-  rowsPerPage: 3,
+  rowsPerPage: 3
 });
 space.appendChild(readOnlyTable);
 ```

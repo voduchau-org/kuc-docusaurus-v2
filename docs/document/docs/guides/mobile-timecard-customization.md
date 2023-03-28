@@ -12,13 +12,13 @@ This section describes how to use the MobileButton component and the MobileNotif
 
 The completed image of the timecard customization is as follows:
 
-![Timecard](assets/timecard.png)
-<br>
-![Stamp message](assets/timecard_notification.png)
+![Timecard](../assets/timecard.png)
+<br/>
+![Stamp message](../assets/timecard_notification.png)
 
 ## JavaScript and CSS Customization
 
-When you import the Kintone UI Component UMD file to the app, you can upload the JavaScript files by following the steps described below.<br>
+When you import the Kintone UI Component UMD file to the app, you can upload the JavaScript files by following the steps described below.<br/>
 See [Quick Start](../getting-started/quick-start.md) for how to upload a file.
 
 ### Show punch-in and punch-out buttons
@@ -26,10 +26,12 @@ See [Quick Start](../getting-started/quick-start.md) for how to upload a file.
 Use the MobileButton component to display the punch-in and punch-out buttons.
 
 ```javascript
-kintone.events.on('mobile.app.record.index.show', (event) => {
-
+kintone.events.on('mobile.app.record.index.show', event => {
   // Prevent button duplication bug
-  if (document.getElementById('kuc_punch_in_button') || document.getElementById('kuc_punch_out_button')) {
+  if (
+    document.getElementById('kuc_punch_in_button') ||
+    document.getElementById('kuc_punch_out_button')
+  ) {
     return event;
   }
 
@@ -67,7 +69,7 @@ To adjust the spacing of the buttons in CSS, assign a value to the `id` property
 
 ### Create a time stamp
 
-The following function is used to retrieve the current time when you click the punch-in button and the punch-out button:<br>
+The following function is used to retrieve the current time when you click the punch-in button and the punch-out button:<br/>
 Creates a value for the Time field format (HH: MM).
 
 ```javascript
@@ -85,7 +87,7 @@ After the timecard is stamped, the process of updating the screen takes place.
 
 ```javascript
 // Reload function
-const reload = (waitSeconds) => {
+const reload = waitSeconds => {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve(document.location.reload());
@@ -96,7 +98,7 @@ const reload = (waitSeconds) => {
 
 ### What happens when the punch-in button is clicked?
 
-The MobileButton component can specify a click event.<br>
+The MobileButton component can specify a click event.<br/>
 When you click the "punch-in" button, the following process is added.
 
 - Judge whether or not there is a record of the user logging in on the day.
@@ -109,9 +111,14 @@ punchInButton.addEventListener('click', async () => {
     // Check for records on the day
     const getParams = {
       app,
-      query: 'date = TODAY() and creator in (LOGINUSER()) order by $id desc limit 1 offset 0'
+      query:
+        'date = TODAY() and creator in (LOGINUSER()) order by $id desc limit 1 offset 0'
     };
-    const resp = await kintone.api(kintone.api.url('/k/v1/records', true), 'GET', getParams);
+    const resp = await kintone.api(
+      kintone.api.url('/k/v1/records', true),
+      'GET',
+      getParams
+    );
 
     // Display the message if there are any records on the day
     if (resp.records.length) {
@@ -133,17 +140,21 @@ After checking for the presence or absence of records, the following process is 
 if (!resp.records.length) {
   const postParams = {
     app,
-    'record': {
-    　'start': {
-        'value': getTime()
+    record: {
+      start: {
+        value: getTime()
       }
     }
   };
-  await kintone.api(kintone.api.url('/k/v1/record', true), 'POST', postParams);
+  await kintone.api(
+    kintone.api.url('/k/v1/record', true),
+    'POST',
+    postParams
+  );
 
   // Display the message when punch-in
   const info = new Kuc.MobileNotification({
-      text: 'Registered a punch-in time!'
+    text: 'Registered a punch-in time!'
   });
   info.open();
   await reload(5);
@@ -159,7 +170,7 @@ When you click the punch-out button, the following process takes place in the sa
 - Stamp the punch-out time if there is a record.
 - Show the notification when the punch-out time stamping is completed.
 
-*The code is omitted because there are a lot of parts that are similar to the punch-in process.<br>
+*The code is omitted because there are a lot of parts that are similar to the punch-in process.<br/>
 *The same process is performed when an error message is displayed.
 
 ### Show error messages
@@ -180,5 +191,5 @@ If an error occurs during the process, use the MobileNotification component to d
 }
 ```
 
-> This article was reviewed by Kintone and Google Chrome as of August, 2021.<br>
+> This article was reviewed by Kintone and Google Chrome as of August, 2021.<br/>
 > In addition, the version of Kintone UI Component that is used for customization is v1.0.5.

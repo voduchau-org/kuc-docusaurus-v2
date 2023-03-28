@@ -37,7 +37,7 @@ Here is a list of properties that can be used for modifying the component:
 | :--- | :--- | :--- | :--- | :--- |
 | content | string/HTMLElement | "" | Tab content | |
 | label | string | "" | Tab name | |
-| value | string | "" | Key of each tab<br>*`Required` and `Unique` | Will result an error if the `value` is duplicated in `items` or not specified |
+| value | string | "" | Key of each tab<br/>*`Required` and `Unique` | Will result an error if the `value` is duplicated in `items` or not specified |
 | disabled | boolean | false | Enable/Disable the tab | |
 | visible | boolean | true | Show/Hide the tab | |
 
@@ -47,11 +47,11 @@ Here is a list of events that can be specified:
 
 | Name | Type | Description | Remark |
 | :--- | :--- | :--- | :--- |
-| change | function | Event handler of when selected tab is changed |  It will pass the event object as the argument<br><br>You can receive the following values in event.detail<br><li>event.detail.oldValue : "value" before the change</li><li>event.detail.value : "value" after the change</li> |
+| change | function | Event handler of when selected tab is changed |  It will pass the event object as the argument<br/><br/>You can receive the following values in event.detail<br/><li>event.detail.oldValue : "value" before the change</li><li>event.detail.value : "value" after the change</li> |
 
 ### Constructor
 
-Tabs(options)<br>
+Tabs(options)<br/>
 Here is a list of available constructors:
 
 #### Parameter
@@ -74,16 +74,16 @@ const space = kintone.app.record.getSpaceElement('space');
 
 // Create each Tab content
 const textArea = new Kuc.TextArea({
-  label: "TextArea",
-  value: "This is sample."
+  label: 'TextArea',
+  value: 'This is sample.'
 });
 
 const timePicker = new Kuc.TimePicker({
-  label: "Time",
-  value: "11:30"
+  label: 'Time',
+  value: '11:30'
 });
 
-const text = "This is sample.";
+const text = 'This is sample.';
 
 const tabs = new Kuc.Tabs({
   items: [

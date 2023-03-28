@@ -10,11 +10,11 @@ Kintone UI Component is a library that enables Kintone developers to build forms
 
 ### Example for Desktop components
 
-![desktop components](assets/desktop_components.png)
+![desktop components](../assets/desktop_components.png)
 
 ### Example for Mobile components
 
-![mobile components](assets/mobile_components.png)
+![mobile components](../assets/mobile_components.png)
 
 ## Preparation: Create App
 
@@ -22,27 +22,27 @@ In this tutorial, you will place a Button component inside the header menu space
 
 First, follow the below steps to create an app to install Kintone UI Component.
 
-1. Create a blank app. ([Creating an App from Scratch](https://get.kintone.help/k/en/user/create_app/tutorial.html))<br>
+1. Create a blank app. ([Creating an App from Scratch](https://get.kintone.help/k/en/user/create_app/tutorial.html))<br/>
 You do not need to set up any fields in this app.
 
 ## Installation
 
-Kintone UI Component supports installation via a UMD, a CDN, or a npm package.<br>
-You can choose to import or implement the library according to the environment such as the browser environment or Node.js environment.<br>
+Kintone UI Component supports installation via a UMD, a CDN, or a npm package.<br/>
+You can choose to import or implement the library according to the environment such as the browser environment or Node.js environment.<br/>
 In this article, we will show you how to install and implement using each approach.
 
 > We recommend that you should upgrade Kintone UI Component to the latest version for your projects.
 
-> See the Components section in the sidebar for more details on each component.<br>
+> See the Components section in the sidebar for more details on each component.<br/>
 > (Additional components will be added in order.)
 
 ### Use the UMD
 
-> When using a version on and after v1.4.0, please use `Kucs["1.x.x"]` instead of Kuc and specify your expected version (ex. `new Kucs["1.4.0"].Button()`).<br>
-> The rendered components' tags and class names will include the version number.<br>
-> You may still use `Kuc` as a global variable but **note that it may be conflicting when adding two or more `kuc.min.js` files** on Kintone customization or plug-in. In this case, the `Kuc` object refers to the last loaded `kuc.min.js` file.<br>
+> When using a version on and after v1.4.0, please use `Kucs["1.x.x"]` instead of Kuc and specify your expected version (ex. `new Kucs["1.4.0"].Button()`).<br/>
+> The rendered components' tags and class names will include the version number.<br/>
+> You may still use `Kuc` as a global variable but **note that it may be conflicting when adding two or more `kuc.min.js` files** on Kintone customization or plug-in. In this case, the `Kuc` object refers to the last loaded `kuc.min.js` file.<br/>
 > In case that there is only one `kuc.min.js` file in the Kintone system or there is no problem with using last loaded `kuc.min.js` file, you can use Kuc object. Please remove `const Kuc = Kucs['1.x.x'];` line.
-> When using a version before v1.4.0, please use `Kuc` as a global variable but **note that it may be conflicting when adding two or more `kuc.min.js` files** on Kintone customization or plug-in.<br>
+> When using a version before v1.4.0, please use `Kuc` as a global variable but **note that it may be conflicting when adding two or more `kuc.min.js` files** on Kintone customization or plug-in.<br/>
 > Please read this [Version conflicts issue and solution](../guides/version-conflicts-issue-solution) article for more information!
 
 1. Download the file located inside Kintone UI Component repository's [each version Release field](https://github.com/kintone-labs/kintone-ui-component/releases). Unzip the attached archives folder (kintone-ui-component-{version} .tgz). Upload the following file to the `JavaScript and CSS Customization` inside Kintone's app setting.
@@ -56,7 +56,7 @@ In this article, we will show you how to install and implement using each approa
 >If you only have one `kuc.min.js` file in your system, or you are okay with using the `kuc.min.js` file loaded last, you can remove the "`const Kuc = Kucs['1.x.x']`" line.
 
 ```js
-const Kuc = Kucs["1.x.x"];
+const Kuc = Kucs['1.x.x'];
 
 kintone.events.on('app.record.index.show', event => {
   const header = kintone.app.getHeaderMenuSpaceElement();
@@ -65,8 +65,8 @@ kintone.events.on('app.record.index.show', event => {
     text: 'Submit',
     type: 'submit'
   });
-  button.addEventListener('click', event => {
-    console.log(event);
+  button.addEventListener('click', clickEvent => {
+    console.log(clickEvent);
   });
 
   header.appendChild(button);
@@ -76,12 +76,12 @@ kintone.events.on('app.record.index.show', event => {
 
 3. To apply the customization, upload `index.js` file to the `JavaScript and CSS Customization` inside the Kintone app settings. ([Customizing an App with JavaScript and CSS](https://get.kintone.help/k/en/user/app_settings/js_customize.html))
 
-![button customize](assets/button_customize.png)
+![button customize](../assets/button_customize.png)
 
 ### Use the CDN
 > See the guidance and sample code at [Use UMD](#use-the-umd) section.
 
-1. Add the following CDN URL into the `JavaScript and CSS Customization` of a deployed Kintone app. ([Customizing an App with JavaScript and CSS](https://get.kintone.help/k/en/user/app_settings/js_customize.html))<br>
+1. Add the following CDN URL into the `JavaScript and CSS Customization` of a deployed Kintone app. ([Customizing an App with JavaScript and CSS](https://get.kintone.help/k/en/user/app_settings/js_customize.html))<br/>
 Once the CDN is being imported to the app, you will have access to the global object of `Kuc`.
 
    - For the latest version of Kintone UI Component:
@@ -96,13 +96,13 @@ Once the CDN is being imported to the app, you will have access to the global ob
 
 2. The following is the same as the UMD.
 
-> unpkg is not a CDN service provided by Cybozu. It is recommended that you use this for verification.<br>
+> unpkg is not a CDN service provided by Cybozu. It is recommended that you use this for verification.<br/>
 > In the production environment, you can use the `kuc.min.js` of the UMD to avoid any failures and problems related to unpkg.
 
 ### Use the npm package
 
-> When using on and after v1.4.0, rendered components' tags and class names will include the version number.<br>
-> Please read this [Version conflicts issue and solution](../guides/version-conflicts-issue-solution) article for more information! <br>
+> When using on and after v1.4.0, rendered components' tags and class names will include the version number.<br/>
+> Please read this [Version conflicts issue and solution](../guides/version-conflicts-issue-solution) article for more information! <br/>
 
 1. Create a folder name `customization`, and move your root into the folder, then execute the following command:
 
@@ -127,14 +127,13 @@ kintone.events.on('app.record.index.show', event => {
     text: 'Submit',
     type: 'submit'
   });
-  button.addEventListener('click', event => {
-    console.log(event);
+  button.addEventListener('click', clickEvent => {
+    console.log(clickEvent);
   });
 
   header.appendChild(button);
   return event;
 });
-
 ```
 3. Add the following `webpack.config.js` file into the root:
 
@@ -143,14 +142,14 @@ const path = require('path');
 module.exports = (env = {}) => {
   return {
     entry: {
-      "customization": './src/index.js'
+      customization: './src/index.js'
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: '[name].min.js',
+      filename: '[name].min.js'
     }
-  }
-}
+  };
+};
 ```
 
 4. Add webpack build script into `package.json`.
@@ -175,7 +174,7 @@ Output Result：
 
 6. Upload the bundled file created in the previous step to the `JavaScript and CSS Customization` option inside Kintone app settings. ([Customizing an App with JavaScript and CSS](https://get.kintone.help/k/en/user/app_settings/js_customize.html))
 
-![button customize](assets/button_customize.png)
+![button customize](../assets/button_customize.png)
 
 ## Browser support status
 

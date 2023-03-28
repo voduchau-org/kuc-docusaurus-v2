@@ -27,7 +27,7 @@ Here is a list of properties that can be used for modifying the component:
 | error | string | ""  | Text to be displayed in error | Error will not be displayed if unspecified or empty |
 | id | string | ""  | Component id name | |
 | label | string | ""  | Label for the component | Label is not displayed if unspecified or empty |
-| value | string | ""  | Component value | No option will be selected if the value is unspecified |
+| value | string | ""  | Component value | No option will be selected if the value is unspecified<br/>Will result an error if the value is not a string |
 | disabled | boolean | false | Enable/Disable the component | |
 | requiredIcon | boolean | false | Show/Hide the required icon | |
 | visible | boolean | true | Show/Hide the component | |
@@ -41,11 +41,11 @@ Here is a list of events that can be specified:
 
 | Name | Type | Description | Remark |
 | :--- | :--- | :--- | :--- |
-| change | function | Event handler when the value has been changed | It will pass the event object as the argument<br><br>You can receive the following values when used in event.detail<br>event.detail.oldValue : Value before the change<br>event.detail.value : Value after the change |
+| change | function | Event handler when the value has been changed | It will pass the event object as the argument<br/><br/>You can receive the following values when used in event.detail<br/>event.detail.oldValue : Value before the change<br/>event.detail.value : Value after the change |
 
 ### Constructor
 
-Combobox(options)<br>
+Combobox(options)<br/>
 Here is a list of available constructors:
 
 #### Parameter
@@ -72,9 +72,9 @@ const combobox = new Kuc.Combobox({
   items: [
     { label: 'Banana', value: 'banana' },
     { label: 'Orange', value: 'orange' },
-    { label: 'Apple', value: 'apple' },
+    { label: 'Apple', value: 'apple' }
   ],
-  value:  'orange',
+  value: 'orange',
   requiredIcon: true,
   error: 'Error occurred!',
   className: 'options-class',

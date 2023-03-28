@@ -31,7 +31,7 @@ Here is a list of properties that can be used for modifying the component:
 
 ### Constructor
 
-Spinner(options)<br>
+Spinner(options)<br/>
 Here is a list of available constructors:
 
 #### Parameter

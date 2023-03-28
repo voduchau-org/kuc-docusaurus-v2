@@ -26,7 +26,7 @@ Here is a list of properties that can be used for modifying the component:
 | className | string | ""  | Component class name |  |
 | id | string | ""  | Component id name |  |
 | text | string | ""  | Text to be displayed inside the button | |
-| type | string | "normal"  | Button design type | Available options:<br>"normal" : Gray (#f7f9fA)<br>"submit" : Blue (#3498db)<br>"alert" : Red (#e74c3c) |
+| type | string | "normal"  | Button design type | Available options:<br/>"normal" : Gray (#f7f9fA)<br/>"submit" : Blue (#3498db)<br/>"alert" : Red (#e74c3c) |
 | disabled | boolean | false | Enable/Disable the component | |
 | visible | boolean | true | Show/Hide the component | |
 
@@ -40,7 +40,7 @@ Here is a list of events that can be specified:
 
 ### Constructor
 
-Button(options)<br>
+Button(options)<br/>
 Here is a list of available constructors:
 
 #### Parameter

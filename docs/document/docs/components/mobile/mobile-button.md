@@ -26,7 +26,7 @@ Here is a list of properties that can be used for modifying the component:
 | className | string | ""  | Component class name |  |
 | id | string | ""  | Component id name |  |
 | text | string | ""  | Text to be displayed in buttons | |
-| type | string | "normal"  | Button design type | Available options:<br>"normal" : White (#ffffff)<br>"submit" : Blue (#206694) |
+| type | string | "normal"  | Button design type | Available options:<br/>"normal" : White (#ffffff)<br/>"submit" : Blue (#206694) |
 | disabled | boolean | false | Enable/Disable the component | |
 | visible | boolean | true | Show/Hide the component | |
 
@@ -40,7 +40,7 @@ Here is a list of events that can be specified:
 
 ### Constructor
 
-MobileButton(options)<br>
+MobileButton(options)<br/>
 Here is a list of available constructors:
 
 #### Parameter
