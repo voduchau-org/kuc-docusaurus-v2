@@ -10,7 +10,7 @@ export default function HomepageFeatures() {
   } = useDocusaurusContext();
   const domain = `${url}/${baseUrl}`;
 
-  const useCaseSrc = `${domain}/img/usecase_button.png`;
+  const useCaseSrc = `/img/usecase_button.png`;
 
   return (
     <section className={styles.features}>
