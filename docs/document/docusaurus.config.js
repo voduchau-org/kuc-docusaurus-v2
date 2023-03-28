@@ -32,12 +32,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en', 'ja'],
   },
-  scripts: [
-    {
-       src: 'https://unpkg.com/kintone-ui-component/umd/kuc.min.js',
-       async: true,
-    },
-  ],
+  scripts: ["https://unpkg.com/kintone-ui-component/umd/kuc.min.js"],
   presets: [
     [
       '@docusaurus/preset-classic',

@@ -9,10 +9,9 @@ original_id: mobile-radio-button
 
 The MobileRadioButton component allows the user to select one out of several options.
 
-<div class="sample-container" id="mobile-radio-button">
-  <div id="sample-container__components" class="mobile"></div>
-</div>
-<script src="/js/samples/mobile/mobile-radio-button.js"></script>
+import { MobileRadioButtonComponent } from "@site/static/js/samples/mobile/radio-button.js"
+
+<MobileRadioButtonComponent />
 
 ---
 

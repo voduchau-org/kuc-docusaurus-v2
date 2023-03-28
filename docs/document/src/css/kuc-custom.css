@@ -38,3 +38,80 @@
 .usecase_code button {
   display: none;
 }
+
+#notification {
+  display: block;
+}
+
+#notification #sample-container__components{
+  height: 250px;
+  position: relative;
+}
+
+#notification #sample-container__components .notification {
+  position: absolute;
+}
+
+#notification #sample-container__components .notification pre {
+  background-color: unset;
+  border-radius: unset;
+  color: unset;
+  font: unset;
+  margin: unset;
+  overflow: unset;
+  padding: unset;
+}
+
+#checkbox .cus-checkbox div[class$=__select-menu__item], #radio-button .cus-radio-button div[class$=__select-menu__item] {
+  height: auto;
+}
+
+#spinner #sample-container__components{
+  height: 250px;
+  position: relative;
+  display: flex;
+}
+
+#spinner #sample-container__components .spinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#spinner #sample-container__components .spinner div {
+  position: absolute;
+}
+
+#sample-container__components {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sample-container .mobile {
+  max-width: 375px;
+}
+
+#mobile-checkbox .cus-mobile-checkbox label[class$=__select-menu__item] {
+  height: 40px;
+}
+
+#mobile-checkbox {
+  display: flex;
+  justify-content: center;
+}
+
+#mobile-checkbox .cus-mobile-checkbox {
+  min-width: 235px;
+}
+
+#mobile-button .kuc_normal_button {
+  margin: 0 5px 0 0;
+}
+.sample-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#mobile-radio-button .cus-mobile-radio-button div[class$=__select-menu__item] {
+  min-width: 253px;
+}

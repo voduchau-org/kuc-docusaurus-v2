@@ -9,10 +9,9 @@ original_id: radio-button
 
 The RadioButton component allows the user to select one out of several options.
 
-<div class="sample-container" id="radio-button">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/desktop/radio-button.js"></script>
+import { RadioButtonComponent } from "@site/static/js/samples/desktop/radio-button.js"
+
+<RadioButtonComponent />
 
 ---
 

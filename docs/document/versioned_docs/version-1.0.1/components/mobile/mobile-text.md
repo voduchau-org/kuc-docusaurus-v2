@@ -9,10 +9,10 @@ original_id: mobile-text
 
 The MobileText component allows the user to display a single line text element.
 
-<div class="sample-container" id="mobile-text">
-  <div id="sample-container__components" class="mobile"></div>
-</div>
-<script src="/js/samples/mobile/mobile-text.js"></script>
+import { MobileTextComponent } from "@site/static/js/samples/mobile/text.js"
+
+<MobileTextComponent />
+
 
 ---
 

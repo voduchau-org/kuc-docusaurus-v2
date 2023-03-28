@@ -9,10 +9,9 @@ original_id: mobile-button
 
 The MobileButton component allows the user to create and displays buttons.
 
-<div class="sample-container" id="mobile-button">
-  <div id="sample-container__components" class="mobile"></div>
-</div>
-<script src="/js/samples/mobile/mobile-button.js"></script>
+import { MobileButtonComponent } from "@site/static/js/samples/mobile/button.js"
+
+<MobileButtonComponent />
 
 ---
 
