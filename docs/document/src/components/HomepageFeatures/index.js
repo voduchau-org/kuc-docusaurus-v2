@@ -4,7 +4,6 @@ import CodeBlock from '@theme/CodeBlock';
 import KucCodeExample from '!!raw-loader!./kucCodeExample';
 
 export default function HomepageFeatures() {
-
   const useCaseSrc = `/img/usecase_button.png`;
 
   return (

@@ -13,7 +13,7 @@ function getLatestVersionName() {
 const config = {
   title: 'Be a smart Kintone developer with Kintone UI Component.',
   tagline: 'It will support your UI customization project.',
-  url: 'https://kuc.kintone.dev',
+  url: 'https://kintone-ui-component.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'warn', // throw
   onBrokenMarkdownLinks: 'warn',
@@ -22,8 +22,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'kintone-labs', // Usually your GitHub org/user name.
-  projectName: 'kintone-ui-component', // Usually your repo name.
+  organizationName: 'Cybozu-SD', // Usually your GitHub org/user name.
+  projectName: 'kuc-docusaurus-v2', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -47,8 +47,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: undefined,
           lastVersion: `${getLatestVersionName()}`,
         },
         theme: {
