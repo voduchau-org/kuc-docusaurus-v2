@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmitOnError": true,
+    "esModuleInterop": false,
+    "importHelpers": true,
+    "outDir": "./unit_test",
+    "types": ["@types/mocha"]
+  },
+  "include": ["./src/**/*.ts"]
+}
