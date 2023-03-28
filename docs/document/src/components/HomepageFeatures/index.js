@@ -1,14 +1,9 @@
 import React from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 import CodeBlock from '@theme/CodeBlock';
 import KucCodeExample from '!!raw-loader!./kucCodeExample';
 
 export default function HomepageFeatures() {
-  const {
-    siteConfig: {url, baseUrl},
-  } = useDocusaurusContext();
-  const domain = `${url}/${baseUrl}`;
 
   const useCaseSrc = `/img/usecase_button.png`;
 
