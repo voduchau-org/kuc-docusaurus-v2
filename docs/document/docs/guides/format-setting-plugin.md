@@ -347,7 +347,7 @@ cancelButton.addEventListener('click', event => {
 
 To avoid saving unintended settings, insert a confirmation dialog that displays after the save button is clicked.<br/>
 
-![Confirmation](assets/dialog.png)
+![Confirmation](../assets/dialog.png)
 
 When the OK button is clicked, the information you want the plug-in to have as a setting value is stored in the object and saved in the plug-in.
 
