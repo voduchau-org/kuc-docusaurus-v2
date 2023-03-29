@@ -9,12 +9,10 @@ original_id: notification
 
 The Notification component allows the user to display pop-up notifications.
 
-<div class="sample-container" id="notification">
-  <div id="sample-container__components">
-    <iframe id="iframe" title="notification" width="300px" height="250px"></iframe>
-  </div>
-</div>
-<script src="/js/samples/desktop/notification.js"></script>
+import { NotificationComponent } from "@site/static/js/samples/desktop/notification.js"
+
+<NotificationComponent />
+
 
 ---
 
