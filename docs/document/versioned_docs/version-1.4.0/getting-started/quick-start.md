@@ -11,11 +11,11 @@ Kintone UI Component is a library that enables Kintone developers to build forms
 
 ### Example for Desktop components
 
-![desktop components](assets/desktop_components.png)
+![desktop components](../../../docs/assets/desktop_components.png)
 
 ### Example for Mobile components
 
-![mobile components](assets/mobile_components.png)
+![mobile components](../../../docs/assets/mobile_components.png)
 
 ## Preparation: Create App
 
@@ -77,7 +77,7 @@ kintone.events.on('app.record.index.show', event => {
 
 3. To apply the customization, upload `index.js` file to the `JavaScript and CSS Customization` inside the Kintone app settings. ([Customizing an App with JavaScript and CSS](https://get.kintone.help/k/en/user/app_settings/js_customize.html))
 
-![button customize](assets/button_customize.png)
+![button customize](../../../docs/assets/button_customize.png)
 
 ### Use the CDN
 > See the guidance and sample code at [Use UMD](#use-the-umd) section.
@@ -176,7 +176,7 @@ Output Result：
 
 6. Upload the bundled file created in the previous step to the `JavaScript and CSS Customization` option inside Kintone app settings. ([Customizing an App with JavaScript and CSS](https://get.kintone.help/k/en/user/app_settings/js_customize.html))
 
-![button customize](assets/button_customize.png)
+![button customize](../../../docs/assets/button_customize.png)
 
 ## Browser support status
 

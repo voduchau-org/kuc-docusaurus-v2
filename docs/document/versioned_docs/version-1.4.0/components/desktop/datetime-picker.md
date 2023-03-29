@@ -12,6 +12,7 @@ The DateTimePicker component allows the user to display a input area of time & d
 import { DateTimePickerComponent } from "@site/static/js/samples/desktop/datetime-picker.js"
 
 <DateTimePickerComponent />
+
 ---
 
 ## Specification

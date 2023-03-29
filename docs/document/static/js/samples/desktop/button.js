@@ -5,6 +5,8 @@ export const ButtonComponent = () =>  {
   useEffect(() => {
     const Kuc = Kucs["1.10.0"];
 
+    console.log(Kuc)
+
     const buttonNormal = new Kuc.Button({
       text: "Normal",
       type: "normal",

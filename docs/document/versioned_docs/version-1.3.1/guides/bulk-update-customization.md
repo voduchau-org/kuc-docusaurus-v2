@@ -20,7 +20,7 @@ By adding Kintone UI Component to the UI, the user can rapidly create screens th
 
 The completed image of the customized page is as follows:
 
-![Bulk Update](assets/bulk_update.gif)
+![Bulk Update](../../../docs/assets/bulk_update.gif)
 
 ## What you will need to have ready
 

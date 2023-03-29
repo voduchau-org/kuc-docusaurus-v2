@@ -67,6 +67,7 @@
 }
 
 #spinner #sample-container__components{
+  width: 100%;
   height: 250px;
   position: relative;
   display: flex;
@@ -114,4 +115,18 @@
 
 #mobile-radio-button .cus-mobile-radio-button div[class$=__select-menu__item] {
   min-width: 253px;
+}
+
+#dialog #sample-container__components {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+#dialog #sample-container__components .dialog div[class$=__dialog] {
+  position: absolute;
+}
+
+#dialog #sample-container__components .dialog div[class$=__mask] {
+  position: absolute;
 }

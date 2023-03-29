@@ -24,14 +24,14 @@ The implementation scenarios and the completed image of the customized page are 
 
 Set the account closing date of your company on the plug-in settings page and implement a customization as a plug-in that colors red the target field of a record when today's date is before the closing date.
 
-![Plugin setting](assets/plugin_setting.png)
+![Plugin setting](../../../docs/assets/plugin_setting.png)
 This is the plug-in settings page.<br/>
 When the set conditions match (if today's date is before or after the reference date), the color of the set field changes to red on the Record Details page.
 
-![Confirmation](assets/dialog.png)
+![Confirmation](../../../docs/assets/dialog.png)
 A confirmation dialog is displayed when saving the settings.
 
-![App image](assets/payment_management_app.png)
+![App image](../../../docs/assets/payment_management_app.png)
 This is an app that manages deposits.<br/>
 The background color of the field changes according to the conditions set on the plug-in settings page.
 
@@ -346,7 +346,7 @@ cancelButton.addEventListener("click", event => {
 
 To avoid saving unintended settings, insert a confirmation dialog that displays after the save button is clicked.<br/>
 
-![Confirmation](assets/dialog.png)
+![Confirmation](../../../docs/assets/dialog.png)
 
 When the OK button is clicked, the information you want the plug-in to have as a setting value is stored in the object and saved in the plug-in.
 

@@ -17,16 +17,16 @@ For KUC, we use [Web Components](https://developer.mozilla.org/en-US/docs/Web/We
 The [CustomElementRegistry](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry) that we use in that case is a global window object and we cannot define an already registered custom HTML tag again with Web Components.<br/>
 When a KUC package tries to register a custom HTML tag, and a later loaded package also tries to define the same tag again, the rendering problem occurs.
 
-![Multiple packages try to define the same custom HTML tag](assets/version-conflict-diagram.jpeg)
+![Multiple packages try to define the same custom HTML tag](../../../docs/assets/version-conflict-diagram.jpeg)
 
 ## Solution
 
 Because we cannot register the same custom HTML tag more than once, from v1.4.0, custom HTML tags will include a version number at the end. This change also applies to class names to avoid conflicting CSS styles.
 
-![Custom HTML tag example](assets/version-conflict-html-tag.png)
+![Custom HTML tag example](../../../docs/assets/version-conflict-html-tag.png)
 <center>Tag and class names will include the version number at the end</center>
 
-![CSS example](assets/version-conflict-css.png)
+![CSS example](../../../docs/assets/version-conflict-css.png)
 <center>CSS of the component also changes to include the version number</center>
 
 In addition, we also check to see whether a custom HTML tag has been registered or not before defining it.
@@ -68,7 +68,7 @@ When using a version before v1.4.0, the below version conflicts errors might occ
 
 For example, we load the v1.2.0 `kuc.min.js` file in the Kintone system and the v1.3.0 `kuc.min.js` file in our app. An `Illegal constructor` error will show when we try to create a new KUC Button component.
 
-![Illegal constructor error when importing multiple kuc.min.js files](assets/UMD_multi_files.jpeg)
+![Illegal constructor error when importing multiple kuc.min.js files](../../../docs/assets/UMD_multi_files.jpeg)
 
 ### For users using version on and after v1.4.0
 

@@ -162,7 +162,7 @@ button.addEventListener('click', () => {
 ```
 The record should be created after it is verified that the required items have values.<br/>
 
-The values of the required items entered on the page can be retrieved using <Component variable name.value>.<br/>
+The values of the required items entered on the page can be retrieved using `<Component variable name.value>`.<br/>
 For this customization, the value entered in each component is retrieved using radiobutton.value, checkbox.value and dropdown.value.
 
 The Notification component displays a message if the record is successfully created and registered.
