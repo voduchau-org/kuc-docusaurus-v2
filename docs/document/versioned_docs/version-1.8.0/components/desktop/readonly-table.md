@@ -9,10 +9,9 @@ original_id: readonly-table
 
 The ReadOnlyTable component allows the user to display a read-only mode table.
 
-<div class="sample-container" id="readonly-table">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/desktop/readonly-table.js"></script>
+import { ReadOnlyTableComponent } from "@site/static/js/samples/desktop/readonly-table.js"
+
+<ReadOnlyTableComponent />
 
 ---
 

@@ -9,10 +9,9 @@ original_id: attachment
 
 The Attachment component allows the user to upload files by selecting or dragging.
 
-<div class="sample-container" id="attachment">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/desktop/attachment.js"></script>
+import { AttachmentComponent } from "@site/static/js/samples/desktop/attachment.js"
+
+<AttachmentComponent />
 
 ---
 
@@ -43,7 +42,7 @@ Here is a list of events that can be specified:
 
 | Name | Type | Description | Remark |
 | :--- | :--- | :--- | :--- |
-| change | function | Event handler when the files have been changed | It will pass the event object as the argument<br/>You can receive the following values in event.detail <li>add-file (Triggered if add any file)<ul><li>event.detail.type: "add-file"<li>event.detail.oldFiles: Files before add<li>event.detail.files: Files after add<li>event.detail.fileIndex: Index number of the added file (Type: Array\<number>)<ul><li>You can get the added file by "event.detail.files[event.detail.fileIndex[x]]"</ul></li></ul><li>remove-file (Triggered if remove any file)<ul><li>event.detail.type: "remove-file"<li>event.detail.oldFiles: Files before remove<li>event.detail.files: Files after remove<li>event.detail.fileIndex: Index number of the removed file (Type: Array\<number>)<ul><li>You can get the removed file by "event.detail.oldFiles[event.detail.fileIndex[x]]"</ul></li></ul></li> |
+| change | function | Event handler when the files have been changed | It will pass the event object as the argument<br/>You can receive the following values in event.detail <li>add-file (Triggered if add any file)<ul><li>event.detail.type: "add-file"</li><li>event.detail.oldFiles: Files before add</li><li>event.detail.files: Files after add</li><li>event.detail.fileIndex: Index number of the added file (Type: Array\<number/>)<ul><li>You can get the added file by "event.detail.files[event.detail.fileIndex[x]]"</li></ul></li></ul></li><li>remove-file (Triggered if remove any file)<ul><li>event.detail.type: "remove-file"</li><li>event.detail.oldFiles: Files before remove</li><li>event.detail.files: Files after remove</li><li>event.detail.fileIndex: Index number of the removed file (Type: Array\<number/>)<ul><li>You can get the removed file by "event.detail.oldFiles[event.detail.fileIndex[x]]"</li></ul></li></ul></li> |
 
 ### Constructor
 

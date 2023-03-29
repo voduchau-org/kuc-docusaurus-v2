@@ -8,10 +8,9 @@ original_id: table
 ## Overview
 The Table component allows the user to display an editable table.
 
-<div class="sample-container" id="table">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/desktop/table.js"></script>
+import { TableComponent } from "@site/static/js/samples/desktop/table.js"
+
+<TableComponent />
 
 ---
 

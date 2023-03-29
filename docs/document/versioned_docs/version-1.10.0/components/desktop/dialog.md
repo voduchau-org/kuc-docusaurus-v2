@@ -9,12 +9,9 @@ original_id: dialog
 
 The Dialog component displays a dialog box.
 
-<div class="sample-container" id="dialog">
-  <div id="sample-container__components">
-    <iframe id="iframe" title="dialog image" width="700px" height="300px"></iframe>
-  </div>
-</div>
-<script src="/js/samples/desktop/dialog.js"></script>
+import { DialogComponent } from "@site/static/js/samples/desktop/dialog.js"
+
+<DialogComponent />
 
 ---
 
