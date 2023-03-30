@@ -134,6 +134,9 @@
 #table tr{
   border-top: 0;
 }
+#table thead tr {
+  border-bottom: unset;
+}
 #table tr[class$="__table__body__row"]{
   background-color: transparent;
 }
