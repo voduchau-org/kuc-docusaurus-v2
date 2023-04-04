@@ -55,7 +55,6 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -156,6 +155,14 @@ const config = {
         contextualSearch: false,
       },
     }),
+  plugins: [
+    [
+      '@docusaurus/plugin-google-tag-manager',
+      {
+        containerId: 'GTM-5N49D3',
+      },
+    ],
+  ],
 };
 
 module.exports = config;
