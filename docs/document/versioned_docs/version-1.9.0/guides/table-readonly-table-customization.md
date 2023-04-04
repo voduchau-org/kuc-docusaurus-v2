@@ -58,7 +58,7 @@ space.appendChild(table);
 ```
 
 ### The display on UI
-![render](../../../docs/assets/table-edit-text.gif)
+![render](/img/table-edit-text.gif)
 
 When you edit the input in the first cell, the Text component will trigger `change` event with `detail.value = 'user1 edited'`.
 The table then catches that value and assigns it back to the `username` field.
@@ -91,7 +91,7 @@ When you edit the input in the first cell, the value received by the table will 
 ## Examples
 ### Basic Usage
 #### ReadOnlyTable
-![readonly-table](../../../docs/assets/readonly-table.png)
+![readonly-table](/img/readonly-table.png)
 
 Display a read-only mode table.
 
@@ -139,7 +139,7 @@ space.appendChild(readOnlyTable);
 </details>
 
 #### Table
-![table](../../../docs/assets/table.png)
+![table](/img/table.png)
 
 Display a table that can manipulate the components displayed in it.<br/>
 Use the `columns.render` function to specify the component to be displayed in the cell. Please check the `renderGender` and the `renderAddress` functions in the following code example:
@@ -230,7 +230,7 @@ space.appendChild(table);
 </details>
 
 ### Multiple components in one cell (Table)
-![multi-components](../../../docs/assets/two-component-in-cell.png)
+![multi-components](/img/two-component-in-cell.png)
 
 Put multiple components in one table cell using the `columns.render` function.<br/>
 You can display two dropdowns (city and country) in the same cell.
@@ -329,7 +329,7 @@ space.appendChild(table);
 </details>
 
 ### Dependent columns (Table)
-![dependent-columns](../../../docs/assets/dependent-columns.gif)
+![dependent-columns](/img/dependent-columns.gif)
 
 Develop the dependent columns.<br/>
 The city dropdown will be updated when the country dropdown is changed.
@@ -424,7 +424,7 @@ space.appendChild(table);
 </details>
 
 ### Nested tables (Table)
-![table-in-table](../../../docs/assets/table-in-table.png)
+![table-in-table](/img/table-in-table.png)
 
 Show more detailed info on every row with nested tables.
 

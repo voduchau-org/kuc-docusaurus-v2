@@ -22,7 +22,7 @@ You can also learn how to transfer values from components to Kintone fields.
 
 The completed image of the customized page is as follows:
 
-![Cleaning Check List](../../../docs/assets/cleaning_check_list.png)
+![Cleaning Check List](/img/cleaning_check_list.png)
 
 ## JavaScript and CSS customization
 

@@ -14,7 +14,7 @@ original_id: comparison-v0-v1
 例として、 kintone UI Component を使ってレコードの一覧画面に検索ボタンを作るコードでご紹介します。<br/>
 こちらが画面の完成イメージです。
 
-![検索ボックス](../../../../../docs/assets/v1_search_box.png)
+![検索ボックス](/img/v1_search_box.png)
 
 ## JavaScript/CSS カスタマイズ
 
@@ -165,7 +165,7 @@ button.text = 'Register';
 ---
 v0 では、デフォルトではパーツが縦に並ぶ仕様になっており、横並びにするためには CSS などで調整する必要がありました。
 
-![v0](../../../../../docs/assets/v0_search_box.png)
+![v0](/img/v0_search_box.png)
 
 - style を調整する必要がある
 ```
@@ -177,7 +177,7 @@ button.element.style.float = 'right';
 v1 では内部仕様を見直し、ほとんどのコンポーネントがデフォルトで横並びになったことで、調整が不要になりました。<br/>
 （利便性を考え、一部のコンポーネントではデフォルトが縦並びに設定されています。）
 
-![検索ボックス](../../../../../docs/assets/v1_search_box.png)
+![検索ボックス](/img/v1_search_box.png)
 
 ---
 #### プロパティの見直し
@@ -261,7 +261,7 @@ button.addEventListener('click', event => {
 
 メッセージの初期化（エラーメッセージの非表示）も、今回であれば text.error に空文字列を代入するだけなので、簡潔に書くことができます。
 
-![search_box_error](../../../../../docs/assets/v1_search_box_error.png)
+![search_box_error](/img/v1_search_box_error.png)
 
 ---
 #### Item.label の自動補完

@@ -21,7 +21,7 @@ We assume the following scenario:
 ## Completed image
 
 The completed image of the customized page is as follows:
-![attachment customize](../../../docs/assets/attachment_customize.gif)
+![attachment customize](/img/attachment_customize.gif)
 
 ## What you will need to have ready
 

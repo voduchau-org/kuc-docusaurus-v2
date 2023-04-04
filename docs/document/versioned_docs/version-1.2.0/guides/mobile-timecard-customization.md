@@ -13,9 +13,9 @@ This section describes how to use the MobileButton component and the MobileNotif
 
 The completed image of the timecard customization is as follows:
 
-![Timecard](../../../docs/assets/timecard.png)
+![Timecard](/img/timecard.png)
 <br/>
-![Stamp message](../../../docs/assets/timecard_notification.png)
+![Stamp message](/img/timecard_notification.png)
 
 ## JavaScript and CSS Customization
 

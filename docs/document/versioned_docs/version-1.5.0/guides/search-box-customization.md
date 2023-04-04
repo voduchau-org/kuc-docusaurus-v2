@@ -12,10 +12,10 @@ This section describes how to create the search box by using the kintone UI Comp
 The complete image of the search box is as follows:
 
 #### Desktop version
-![Search box (Desktop)](../../../docs/assets/desktop_search_box.png)
+![Search box (Desktop)](/img/desktop_search_box.png)
 
 #### Mobile version
-![Search box (Mobile)](../../../docs/assets/mobile_search_box.png)
+![Search box (Mobile)](/img/mobile_search_box.png)
 
 ## JavaScript and CSS Customization
 

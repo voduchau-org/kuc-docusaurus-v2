@@ -12,10 +12,10 @@ original_id: search-box-customization
 検索ボックスの完成イメージは、次の通りです。
 
 #### デスクトップ版
-![検索ボックス(デスクトップ)](../../../../../docs/assets/desktop_search_box.png)
+![検索ボックス(デスクトップ)](/img/desktop_search_box.png)
 
 #### モバイル版
-![検索ボックス(モバイル)](../../../../../docs/assets/mobile_search_box.png)
+![検索ボックス(モバイル)](/img/mobile_search_box.png)
 
 ## JavaScript/CSS カスタマイズ
 
