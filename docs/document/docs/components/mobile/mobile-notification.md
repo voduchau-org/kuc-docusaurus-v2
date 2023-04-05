@@ -2,18 +2,16 @@
 id: mobile-notification
 title: MobileNotification
 sidebar_label: MobileNotification
+original_id: mobile-notification
 ---
 
 ## Overview
 
 The MobileNotification component allows the user to display pop-up notifications.
 
-<div class="sample-container" id="mobile-notification">
-  <div id="sample-container__components" class="mobile">
-    <iframe id="iframe" title="mobile notification image" width="300px" height="70px"></iframe>
-  </div>
-</div>
-<script src="/js/samples/mobile/mobile-notification.js"></script>
+import { MobileNotificationComponent } from "@site/static/js/samples/mobile/notification.js"
+
+<MobileNotificationComponent />
 
 ---
 
@@ -82,7 +80,7 @@ Here is a sample code when all parameters are specified:
 const Kuc = Kucs['1.x.x'];
 
 const mobileNotification = new Kuc.MobileNotification({
-  text: 'Error occurred!',
+  text:  'Error occurred!',
   className: 'options-class',
   duration: 2000
 });

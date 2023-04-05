@@ -2,15 +2,15 @@
 id: table
 title: Table
 sidebar_label: Table
+original_id: table
 ---
 
 ## Overview
 The Table component allows the user to display an editable table.
 
-<div class="sample-container" id="table">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/desktop/table.js"></script>
+import { TableComponent } from "@site/static/js/samples/desktop/table.js"
+
+<TableComponent />
 
 ---
 
@@ -76,19 +76,19 @@ const Kuc = Kucs['1.x.x'];
 
 const space = kintone.app.record.getSpaceElement('space');
 
-const renderAge = dataCell => {
-  const spanElement = document.createElement('span');
+const renderAge = (dataCell) => {
+  const spanElement = document.createElement("span");
   spanElement.innerText = `The age is ${dataCell}`;
   return spanElement;
 };
 
-const renderName = cellData => {
-  const dropdown = new Kuc.Dropdown({
+const renderName = (cellData) => {
+  const dropdown = new Dropdown({
     items: [
       { label: 'John Brown', value: 'john' },
-      { label: 'Steven Gerrard', value: 'steven' }
+      { label: 'Steven Gerrard', value: 'steven' },
     ],
-    value: cellData
+    value: cellData,
   });
   return dropdown;
 };
@@ -96,21 +96,21 @@ const renderName = cellData => {
 const table = new Kuc.Table({
   label: 'Table',
   columns: [
-    {
-      title: 'Name',
-      field: 'name',
-      render: renderName
-    },
-    {
-      title: 'Address',
-      field: 'address'
-    },
-    {
-      title: 'Age',
-      field: 'age',
-      render: renderAge
-    }
-  ],
+      {
+        title: 'Name',
+        field: 'name',
+        render: renderName
+      },
+      {
+        title: 'Address',
+        field: 'address'
+      },
+      {
+        title: 'Age',
+        field: 'age',
+        render: renderAge
+      }
+    ],
   data: [
     {
       name: 'john',

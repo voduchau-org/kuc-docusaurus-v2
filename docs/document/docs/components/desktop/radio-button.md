@@ -2,16 +2,16 @@
 id: radio-button
 title: RadioButton
 sidebar_label: RadioButton
+original_id: radio-button
 ---
 
 ## Overview
 
 The RadioButton component allows the user to select one out of several options.
 
-<div class="sample-container" id="radio-button">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/desktop/radio-button.js"></script>
+import { RadioButtonComponent } from "@site/static/js/samples/desktop/radio-button.js"
+
+<RadioButtonComponent />
 
 ---
 
@@ -28,7 +28,7 @@ Here is a list of properties that can be used for modifying the component:
 | id | string | ""  | Component id name | |
 | itemLayout | string | "horizontal"  | Orientation for displaying the options | Available options:<br/>"horizontal" : Horizontal<br/>"vertical" : Vertical |
 | label | string | ""  | Label for the component | Label will not be displayed if unspecified or left empty |
-| value *1 | string | ""  | Selected value | No option will be selected if the `value` and `selectedIndex` are unspecified<br/>If setting duplicated value and not setting `selectedIndex`, the first mapped value item in `Item.value` will be selected and `selectedIndex` will be the index number<br/>Will result an error if the value is not a string |
+| value *1 | string | ""  | Selected value | No option will be selected if the `value` and `selectedIndex` are unspecified<br/>If setting duplicated value and not setting `selectedIndex`, the first mapped value item in `Item.value` will be selected and `selectedIndex` will be the index number |
 | selectedIndex *1 | number | -1  | Index of selected item | It supports specifying which duplicated `Item.value` will be selected if there is duplicated `Item.value` in `items`<br/>If `value` is not set and `selectedIndex` is valid, item that has the index number will be selected<br/>If `value` is set with duplicated `Item.value` and `selectedIndex` value maps with duplicated `Item.value` specified in `value`, the item that has the index number will be selected<br/>Will result an error if the value of `selectedIndex` is not a number |
 | borderVisible | boolean | true | Show/Hide the border | |
 | disabled | boolean | false | Enable/Disable the component | |

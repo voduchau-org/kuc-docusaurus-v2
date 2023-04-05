@@ -2,6 +2,7 @@
 id: search-box-customization
 title: Search box customization
 sidebar_label: Search box customization
+original_id: search-box-customization
 ---
 
 ## Overview
@@ -11,10 +12,10 @@ This section describes how to create the search box by using the kintone UI Comp
 The complete image of the search box is as follows:
 
 #### Desktop version
-![Search box (Desktop)](../assets/desktop_search_box.png)
+![Search box (Desktop)](/img/desktop_search_box.png)
 
 #### Mobile version
-![Search box (Mobile)](../assets/mobile_search_box.png)
+![Search box (Mobile)](/img/mobile_search_box.png)
 
 ## JavaScript and CSS Customization
 
@@ -47,7 +48,7 @@ header.appendChild(button);
 
 ### Search character check
 
-The Button component can specify a click event.<br/>
+The Button component can specify a click event.<br//>
 In this case, the following process is added.
 
 - When you click a button, check if there is a value in the text box.
@@ -111,34 +112,31 @@ const params = {
   query: 'text like "' + keyword + '"'
 };
 
-kintone
-  .api(kintone.api.url('/k/v1/records', true), 'GET', params)
-  .then(resp => {
-    if (resp.records.length !== 0) {
-      // Process of displaying record retrieval result
-      const url = '?view=' + id + '&q=f6054049%20like%20"' + keyword + '"';
-      window.location.replace(url);
-    } else if (resp.records.length === 0) {
-      // Process when no record is found
-      const info = new Kuc.Notification({
-        text: 'No records',
-        type: 'info' // Blue background color is set
-      });
-      info.open(); // Show info
-    }
-  })
-  .catch(error => {
-    // Process when REST API error occurs
-    let errmsg = 'An error occurred while retrieving the record.';
-    if (error.message !== undefined) {
-      errmsg += ' ' + error.message;
-    }
-    const alert = new Kuc.Notification({
-      text: errmsg
-      // If the type property is not specified, red background color is set
+kintone.api(kintone.api.url('/k/v1/records', true), 'GET', params).then(resp => {
+  if (resp.records.length !== 0) {
+    // Process of displaying record retrieval result
+    const url = '?view=' + id + '&q=f6054049%20like%20' + '"' + keyword + '"';
+    window.location.replace(url);
+  } else if (resp.records.length === 0) {
+    // Process when no record is found
+    const info = new Kuc.Notification({
+      text: 'No records',
+      type: 'info' // Blue background color is set
     });
-    alert.open(); // Show alert
+    info.open();　// Show info
+  }
+}).catch(error => {
+  // Process when REST API error occurs
+  let errmsg = 'An error occurred while retrieving the record.';
+  if (error.message !== undefined) {
+    errmsg += '\n' + error.message;
+  }
+  const alert = new Kuc.Notification({
+    text: errmsg
+    // If the type property is not specified, red background color is set
   });
+  alert.open();　// Show alert
+});
 ```
 
 ## Conclusion

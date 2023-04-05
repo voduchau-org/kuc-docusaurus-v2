@@ -2,6 +2,7 @@
 id: cleaning-check-list-customization
 title: Cleaning check list customization
 sidebar_label: Cleaning check list customization
+original_id: cleaning-check-list-customization
 ---
 
 ## Overview
@@ -21,7 +22,7 @@ You can also learn how to transfer values from components to Kintone fields.
 
 The completed image of the customized page is as follows:
 
-![Cleaning Check List](../assets/cleaning_check_list.png)
+![Cleaning Check List](/img/cleaning_check_list.png)
 
 ## JavaScript and CSS customization
 
@@ -39,15 +40,11 @@ Notes:
   - For this customization, specify 'Done' for value of the RadioButton component and '-----' for value of the Dropdown component as their initial values.
 
 ```javascript
-kintone.events.on('app.record.index.show', event => {
+kintone.events.on('app.record.index.show', (event) => {
 
   // Prevent components duplication bug
-  if (
-    document.getElementById('kuc_radiobutton') ||
-    document.getElementById('kuc_checkbox') ||
-    document.getElementById('kuc_dropdown') ||
-    document.getElementById('kuc_button')
-  ) {
+  if (document.getElementById('kuc_radiobutton') || document.getElementById('kuc_checkbox') || document.getElementById('kuc_dropdown')
+    || document.getElementById('kuc_button')) {
     return event;
   }
 
@@ -176,29 +173,27 @@ The Notification component displays a message if the record is successfully crea
 const postParam = {
   app,
   record: {
-    status: {
+    'status': {
       value: radiobutton.value
-    },
-    item: {
+      },
+    'item': {
       value: checkbox.value
     },
-    cleaning: {
+    'cleaning': {
       value: dropdown.value
     }
   }
 };
 
 // Register record
-kintone
-  .api(kintone.api.url('/k/v1/record', true), 'POST', postParam)
-  .then(resp => {
-    // Display success message
-    const success = new Kuc.Notification({
-      text: 'Registered check items',
-      type: 'success'
-    });
-    success.open();
+kintone.api(kintone.api.url('/k/v1/record', true), 'POST', postParam).then((resp) => {
+  // Display success message
+  const success = new Kuc.Notification({
+    text: 'Registered check items',
+    type: 'success'
   });
+  success.open();
+})
 ```
 
 ### Display error message
@@ -206,7 +201,7 @@ kintone
 The Notification component displays an error message when an error occurs during the process.
 
 ```javascript
-.catch(error => {
+}).catch((error) => {
   console.log(error);
 
   // Display error message

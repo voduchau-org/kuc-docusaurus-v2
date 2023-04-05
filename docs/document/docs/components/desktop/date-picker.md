@@ -2,16 +2,16 @@
 id: date-picker
 title: DatePicker
 sidebar_label: DatePicker
+original_id: date-picker
 ---
 
 ## Overview
 
 The DatePicker component allows the user to display a input area and date selection calendar.
 
-<div class="sample-container" id="date-picker">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/desktop/date-picker.js"></script>
+import { DatePickerComponent } from "@site/static/js/samples/desktop/date-picker.js"
+
+<DatePickerComponent />
 
 ---
 

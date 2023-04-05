@@ -2,16 +2,16 @@
 id: mobile-time-picker
 title: MobileTimePicker
 sidebar_label: MobileTimePicker
+original_id: mobile-time-picker
 ---
 
 ## Overview
 
 The MobileTimePicker component allows the user to display a input area and time selection listbox.
 
-<div class="sample-container" id="mobile-time-picker">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/mobile/mobile-time-picker.js"></script>
+import { MobileTimePickerComponent } from "@site/static/js/samples/mobile/time-picker.js"
+
+<MobileTimePickerComponent />
 
 ---
 

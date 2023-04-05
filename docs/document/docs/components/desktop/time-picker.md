@@ -2,16 +2,16 @@
 id: time-picker
 title: TimePicker
 sidebar_label: TimePicker
+original_id: time-picker
 ---
 
 ## Overview
 
 The TimePicker component allows the user to display a input area and time selection listbox.
 
-<div class="sample-container" id="time-picker">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/desktop/time-picker.js"></script>
+import { TimePickerComponent } from "@site/static/js/samples/desktop/time-picker.js"
+
+<TimePickerComponent />
 
 ---
 

@@ -2,16 +2,16 @@
 id: textarea
 title: TextArea
 sidebar_label: TextArea
+original_id: textarea
 ---
 
 ## Overview
 
 The TextArea component allows the user to display multiple lines of text element.
 
-<div class="sample-container block" id="textarea">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/desktop/textarea.js"></script>
+import { TextAreaComponent } from "@site/static/js/samples/desktop/textarea.js"
+
+<TextAreaComponent />
 
 ---
 

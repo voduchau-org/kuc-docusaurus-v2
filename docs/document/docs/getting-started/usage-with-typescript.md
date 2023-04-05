@@ -2,6 +2,7 @@
 id: usage-with-typescript
 title: Usage with TypeScript
 sidebar_label: Usage with TypeScript
+original_id: usage-with-typescript
 ---
 ## Overview
 
@@ -52,33 +53,28 @@ npm install kintone-ui-component
 
 2. Modify `src/index.ts`.
 ```js
-import {
-  Dropdown,
-  DropdownChangeEventDetail,
-  DropdownItem,
-  DropdownProps,
-} from 'kintone-ui-component';
+import { Dropdown, DropdownProps, DropdownItem, DropdownChangeEventDetail } from 'kintone-ui-component';
 
 const root = document.getElementById('root');
 const items: DropdownItem[] = [
   {
     label: '-----',
-    value: '-----'
+    value: '-----',
   },
   {
     label: 'Orange',
-    value: 'orange'
+    value: 'orange',
   },
   {
     label: 'Banana',
-    value: 'banana'
-  }
+    value: 'banana',
+  },
 ];
 const dropdownProps: DropdownProps = {
   items: items,
   value: '-----',
   label: 'Fruit',
-  error: 'Error occurred!'
+  error: 'Error occurred!',
 };
 const dropdown = new Dropdown(dropdownProps);
 dropdown.addEventListener('change', ((event: CustomEvent) => {
@@ -93,12 +89,12 @@ npm run build
 ```
 
 Open `index.html` in the `dist` directory in your browser and, if everything went right, you can see a Dropdown component displayed on the page.
-![dropdown image](../assets/kuc-dropdown.png)
+![dropdown image](/img/kuc-dropdown.png)
 KUC is written in TypeScript with complete definitions, so please try it out and enjoy the property suggestion and typing check.
 
-![dropdown param image](../assets/kuc-dropdown-param.png)
+![dropdown param image](/img/kuc-dropdown-param.png)
 
-![dropdown props image](../assets/kuc-dropdown-props.png)
+![dropdown props image](/img/kuc-dropdown-props.png)
 
 You can choose any component of KUC to develop your application.
 Now you can use some type of definition in your project:

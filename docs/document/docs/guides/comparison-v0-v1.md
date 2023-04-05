@@ -2,6 +2,7 @@
 id: comparison-v0-v1
 title: A commentary on the difference between v0 and v1
 sidebar_label: A commentary on the difference between v0 and v1
+original_id: comparison-v0-v1
 ---
 
 ## Overview
@@ -13,7 +14,7 @@ This section explains the differences between the code written in v0 and v1, as 
 For example, you can use the Kintone UI Component to create a search button on the Record List page.<br/>
 Here is the image for example:
 
-![Search box](../assets/v1_search_box.png)
+![Search box](/img/v1_search_box.png)
 
 ## JavaScript and CSS Customization
 
@@ -164,7 +165,7 @@ button.text = 'Register';
 ---
 In v0, the specifications of each part are lined up vertically by default, and CSS is required to be adjusted in the same order.
 
-![v0](../assets/v0_search_box.png)
+![v0](/img/v0_search_box.png)
 
 - style must be adjusted
 ```
@@ -176,7 +177,7 @@ button.element.style.float = 'right';
 In v1, the internal specifications are being restructured, and most of the components are side by side by default, so no additional adjustment is required.<br/>
 (For some components, the default value is set to vertical for convenience.)
 
-![Search box](../assets/v1_search_box.png)
+![Search box](/img/v1_search_box.png)
 
 ---
 #### Restructured the component property
@@ -260,7 +261,7 @@ The `error` property is used to display the error message.
 
 When you initialize the message (hide the error message), you will only need to assign an empty string to text.error property.
 
-![search_box_error](../assets/v1_search_box_error.png)
+![search_box_error](/img/v1_search_box_error.png)
 
 ---
 #### Auto-completion of Item.label
@@ -275,9 +276,9 @@ You can abbreviate the coding as follows:
 const checkbox = new Kuc.Checkbox({
   items: [
     {
-      value: 'orange'
+      value: "orange"
     }
-  ]
+  ],
 });
 ```
 

@@ -2,16 +2,16 @@
 id: tabs
 title: Tabs
 sidebar_label: Tabs
+original_id: tabs
 ---
 
 ## Overview
 
 The Tabs component allows the user to display multiple tabs that can switch displaying contents.
 
-<div class="sample-container" id="tabs">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/desktop/tabs.js"></script>
+import { TabsComponent } from "@site/static/js/samples/desktop/tabs.js"
+
+<TabsComponent />
 
 ---
 
@@ -26,7 +26,7 @@ Here is a list of properties that can be used for modifying the component:
 | :--- | :--- | :--- | :--- | :--- |
 | className | string | ""  | Component class name | |
 | id | string | ""  | Component id name | |
-| value | string | ""  | Selected value | <li>If the `value` is matched in the `items`, the tab will be displayed even if it’s disabled</li><li>The first visible tab will be displayed in the following cases:<ul><li>If the `value` is not matched in the `items`</li><li>If the `value` is matched in the `items`, but the tab is not visible</li></ul><li>Will result an error if the `value` is not string type</li></li> |
+| value | string | ""  | Selected value | <li>If the `value` is matched in the `items`, the tab will be displayed even if it’s disabled</li><li>The first visible tab will be displayed in the following cases:<ul><li>If the `value` is not matched in the `items`</li><li>If the `value` is matched in the `items`, but the tab is not visible</li></ul></li><li>Will result an error if the `value` is not string type</li> |
 | borderVisible | boolean | true  | Show/Hide the border surrounding the content | |
 | visible | boolean | true | Show/Hide the component | |
 | items | Array\<[Item](#item)\> | [] | List of tabs to display | Will result an error if the value of `items` is not an array |
@@ -76,16 +76,16 @@ const space = kintone.app.record.getSpaceElement('space');
 
 // Create each Tab content
 const textArea = new Kuc.TextArea({
-  label: 'TextArea',
-  value: 'This is sample.'
+  label: "TextArea",
+  value: "This is sample."
 });
 
 const timePicker = new Kuc.TimePicker({
-  label: 'Time',
-  value: '11:30'
+  label: "Time",
+  value: "11:30"
 });
 
-const text = 'This is sample.';
+const text = "This is sample.";
 
 const tabs = new Kuc.Tabs({
   items: [

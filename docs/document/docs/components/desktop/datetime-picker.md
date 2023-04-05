@@ -2,16 +2,16 @@
 id: datetime-picker
 title: DateTimePicker
 sidebar_label: DateTimePicker
+original_id: datetime-picker
 ---
 
 ## Overview
 
 The DateTimePicker component allows the user to display a input area of time & date and each selection part.
 
-<div class="sample-container" id="datetime-picker">
-  <div id="sample-container__components"></div>
-</div>
-<script src="/js/samples/desktop/datetime-picker.js"></script>
+import { DateTimePickerComponent } from "@site/static/js/samples/desktop/datetime-picker.js"
+
+<DateTimePickerComponent />
 
 ---
 

@@ -2,6 +2,7 @@
 id: quick-start
 title: Quick Start
 sidebar_label: Quick Start
+original_id: quick-start
 ---
 
 ## What is Kintone UI Component?
@@ -10,11 +11,11 @@ Kintone UI Component is a library that enables Kintone developers to build forms
 
 ### Example for Desktop components
 
-![desktop components](../assets/desktop_components.png)
+![desktop components](/img/desktop_components.png)
 
 ### Example for Mobile components
 
-![mobile components](../assets/mobile_components.png)
+![mobile components](/img/mobile_components.png)
 
 ## Preparation: Create App
 
@@ -56,7 +57,7 @@ In this article, we will show you how to install and implement using each approa
 >If you only have one `kuc.min.js` file in your system, or you are okay with using the `kuc.min.js` file loaded last, you can remove the "`const Kuc = Kucs['1.x.x']`" line.
 
 ```js
-const Kuc = Kucs['1.x.x'];
+const Kuc = Kucs["1.x.x"];
 
 kintone.events.on('app.record.index.show', event => {
   const header = kintone.app.getHeaderMenuSpaceElement();
@@ -65,8 +66,8 @@ kintone.events.on('app.record.index.show', event => {
     text: 'Submit',
     type: 'submit'
   });
-  button.addEventListener('click', clickEvent => {
-    console.log(clickEvent);
+  button.addEventListener('click', event => {
+    console.log(event);
   });
 
   header.appendChild(button);
@@ -76,7 +77,7 @@ kintone.events.on('app.record.index.show', event => {
 
 3. To apply the customization, upload `index.js` file to the `JavaScript and CSS Customization` inside the Kintone app settings. ([Customizing an App with JavaScript and CSS](https://get.kintone.help/k/en/user/app_settings/js_customize.html))
 
-![button customize](../assets/button_customize.png)
+![button customize](/img/button_customize.png)
 
 ### Use the CDN
 > See the guidance and sample code at [Use UMD](#use-the-umd) section.
@@ -127,13 +128,14 @@ kintone.events.on('app.record.index.show', event => {
     text: 'Submit',
     type: 'submit'
   });
-  button.addEventListener('click', clickEvent => {
-    console.log(clickEvent);
+  button.addEventListener('click', event => {
+    console.log(event);
   });
 
   header.appendChild(button);
   return event;
 });
+
 ```
 3. Add the following `webpack.config.js` file into the root:
 
@@ -142,14 +144,14 @@ const path = require('path');
 module.exports = (env = {}) => {
   return {
     entry: {
-      customization: './src/index.js'
+      "customization": './src/index.js'
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: '[name].min.js'
+      filename: '[name].min.js',
     }
-  };
-};
+  }
+}
 ```
 
 4. Add webpack build script into `package.json`.
@@ -174,7 +176,7 @@ Output Result：
 
 6. Upload the bundled file created in the previous step to the `JavaScript and CSS Customization` option inside Kintone app settings. ([Customizing an App with JavaScript and CSS](https://get.kintone.help/k/en/user/app_settings/js_customize.html))
 
-![button customize](../assets/button_customize.png)
+![button customize](/img/button_customize.png)
 
 ## Browser support status
 

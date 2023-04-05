@@ -2,6 +2,7 @@
 id: bulk-update-customization
 title: Bulk update customization
 sidebar_label: Bulk update customization
+original_id: bulk-update-customization
 ---
 
 ## Overview
@@ -19,7 +20,7 @@ By adding Kintone UI Component to the UI, the user can rapidly create screens th
 
 The completed image of the customized page is as follows:
 
-![Bulk Update](../assets/bulk_update.gif)
+![Bulk Update](/img/bulk_update.gif)
 
 ## What you will need to have ready
 
@@ -39,7 +40,7 @@ A Dialog component is scheduled to be provided in a future version update. In th
 ***bulkUpdate.js***
 
 ```javascript
-kintone.events.on('app.record.index.show', event => {
+kintone.events.on('app.record.index.show', (event) => {
 
   // Write the process here
 
@@ -90,14 +91,14 @@ button.addEventListener('click', () => {
       text: 'There are no records being processed.'
     });
     updateAlert.open();
-    return;
+    return event;
   }
 
   Swal.fire({
     title: 'Are you sure to approve the displayed records in bulk?',
     icon: 'question',
-    showCancelButton: true
-  }).then(resp => {
+    showCancelButton: true,
+  }).then((resp) => {
 
     // When Cancel is pressed
     if (!resp.isConfirmed) {
@@ -106,7 +107,7 @@ button.addEventListener('click', () => {
         type: 'info'
       });
       cancelInfo.open();
-      return;
+      return event;
     }
 
     // Write subsequent process
@@ -134,8 +135,8 @@ In obj.action, input the action name set in the process management settings.<br/
 Please note that only records being displayed on the screen will be updated.
 
 ```javascript
-const records = event.records.map(record => {
-  const obj = {};
+const records =  event.records.map(record => {
+  let obj = {};
   obj.id = record.$id.value;
   obj.action = 'Approve';
   return obj;
@@ -143,8 +144,8 @@ const records = event.records.map(record => {
 
 const appId = kintone.app.getId();
 const param = {
-  app: appId,
-  records: records
+  'app': appId,
+  'records': records
 };
 ```
 
@@ -153,26 +154,26 @@ Do not forget to use the close() method of Spinner to end the loading screen.<br
 The close event added in v1.2.0 can be used to reload the screen when the Close button in the Notification component is clicked.
 
 ```javascript
-kintone
-  .api(kintone.api.url('/k/v1/records/status', true), 'PUT', param)
-  .then(() => {
-    const successInfo = new Kuc.Notification({
-      text: 'Bulk approval was successful!',
-      type: 'info'
-    });
-    successInfo.open();
+kintone.api(kintone.api.url('/k/v1/records/status', true), 'PUT', param).then(() => {
 
-    // Finish bulk approval
-    spinner.close();
-
-    // When close button is pressed
-    successInfo.addEventListener('close', () => {
-      location.reload();
-    });
-  })
-  .catch(error => {
-    // Process when REST API error occurs
+  const successInfo = new Kuc.Notification({
+    text: 'Bulk approval was successful!',
+    type: 'info'
   });
+  successInfo.open();
+
+  // Finish bulk approval
+  spinner.close();
+
+  // When close button is pressed
+  successInfo.addEventListener('close', () => {
+    location.reload();
+  });
+
+}).catch(error => {
+  // Process when REST API error occurs
+
+});
 ```
 
 ---
@@ -182,7 +183,7 @@ kintone
 The Notification component displays an error message when an error occurs during the process.
 
 ```javascript
-.catch(error => {
+}).catch(error => {
   // Process when REST API error occurs
   let errmsg = 'An error occurred while retrieving the record.';
   if (error.message) {

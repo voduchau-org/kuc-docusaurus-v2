@@ -2,6 +2,7 @@
 id: table-readonly-table-customization
 title: Table and ReadOnlyTable customization
 sidebar_label: Table and ReadOnlyTable customization
+original_id: table-readonly-table-customization
 ---
 
 ## Overview
@@ -43,7 +44,7 @@ You can see how to upload a file in the [Quick Start](../getting-started/quick-s
 Suppose we have the following settings to display the username with the Text component:
 
 ```javascript
-const renderName = cellData => {
+const renderName = (cellData) => {
   const text = new Kuc.Text({ value: cellData });
   return text;
 };
@@ -51,13 +52,13 @@ const renderName = cellData => {
 const columns = [{ title: 'Username', field: 'username', render: renderName }];
 const data = [{ username: 'user1' }, { username: 'user2' }];
 
-const table = new Kuc.Table({ columns, data });
+const table = new Kuc.Table({columns, data});
 const space = kintone.app.record.getSpaceElement('space');
 space.appendChild(table);
 ```
 
 ### The display on UI
-![render](../assets/table-edit-text.gif)
+![render](/img/table-edit-text.gif)
 
 When you edit the input in the first cell, the Text component will trigger `change` event with `detail.value = 'user1 edited'`.
 The table then catches that value and assigns it back to the `username` field.
@@ -73,12 +74,12 @@ We also use the sample code above and add the following content to the `renderNa
 
 ```javascript
 ...
-const renderName = cellData => {
+const renderName = (cellData) => {
   const text = new Text({ value: cellData });
 
   // Modify the value before it bubble to table cell
-  text.addEventListener('change', event => {
-    event.detail.value = 'modified value'; // add any value you want set to username;
+  text.addEventListener('change', (event) => {
+    event.detail.value = 'modified value' // add any value you want set to username;
   });
   return text;
 };
@@ -90,7 +91,7 @@ When you edit the input in the first cell, the value received by the table will 
 ## Examples
 ### Basic Usage
 #### ReadOnlyTable
-![readonly-table](../assets/readonly-table.png)
+![readonly-table](/img/readonly-table.png)
 
 Display a read-only mode table.
 
@@ -98,47 +99,47 @@ Display a read-only mode table.
   <summary>Show code</summary>
 
   ```js
-  const columns = [
+const columns = [
     {
-      title: 'Name',
-      field: 'name'
+        title: 'Name',
+        field: 'name',
     },
     {
-      title: 'Gender',
-      field: 'gender'
+        title: 'Gender',
+        field: 'gender',
     },
     {
-      title: 'Address',
-      field: 'address'
-    }
-  ];
+        title: 'Address',
+        field: 'address',
+    },
+];
 
-  const data = [
+const data = [
     {
-      name: 'John Brown',
-      gender: 'male',
-      address: 'osaka-japan'
+        name: 'John Brown',
+        gender: 'male',
+        address: 'osaka-japan',
     },
     {
-      name: 'Jim Green',
-      gender: 'female',
-      address: 'tokyo-japan'
+        name: 'Jim Green',
+        gender: 'female',
+        address: 'tokyo-japan',
     },
     {
-      name: 'Joe Black',
-      gender: 'male',
-      address: 'hochiminh-vietnam'
-    }
-  ];
+        name: 'Joe Black',
+        gender: 'male',
+        address: 'hochiminh-vietnam',
+    },
+];
 
-  const readOnlyTable = new Kuc.ReadOnlyTable({ columns, data });
-  const space = kintone.app.record.getSpaceElement('space');
-  space.appendChild(readOnlyTable);
+const readOnlyTable = new Kuc.ReadOnlyTable({columns, data});
+const space = kintone.app.record.getSpaceElement('space');
+space.appendChild(readOnlyTable);
   ```
 </details>
 
 #### Table
-![table](../assets/table.png)
+![table](/img/table.png)
 
 Display a table that can manipulate the components displayed in it.<br/>
 Use the `columns.render` function to specify the component to be displayed in the cell. Please check the `renderGender` and the `renderAddress` functions in the following code example:
@@ -147,89 +148,89 @@ Use the `columns.render` function to specify the component to be displayed in th
   <summary>Show code</summary>
 
   ```js
-  // render gender column with dropdown
-  const renderGender = cellData => {
+// render gender column with dropdown
+const renderGender = (cellData) => {
     const radioButton = new Kuc.RadioButton({
-      items: [
+        items: [
         {
-          label: 'Male',
-          value: 'male'
+            label: 'Male',
+            value: 'male',
         },
         {
-          label: 'Female',
-          value: 'female'
-        }
-      ],
-      itemLayout: 'vertical',
-      value: cellData
+            label: 'Female',
+            value: 'female',
+        },
+        ],
+        itemLayout: 'vertical',
+        value: cellData,
     });
 
     return radioButton;
-  };
+};
 
-  // render address column with dropdown
-  const renderAddress = cellData => {
+// render address column with dropdown
+const renderAddress = (cellData) => {
     const country = cellData.split('-')[1];
     const dropdownCountry = new Kuc.Dropdown({
-      items: [
+        items: [
         {
-          label: 'Viet Nam',
-          value: 'vietnam'
+            label: 'Viet Nam',
+            value: 'vietnam',
         },
         {
-          label: 'Japan',
-          value: 'japan'
-        }
-      ],
-      value: country
+            label: 'Japan',
+            value: 'japan',
+        },
+        ],
+        value: country,
     });
 
     return dropdownCountry;
-  };
+};
 
-  const columns = [
+const columns = [
     {
       title: 'Name',
-      field: 'name'
+      field: 'name',
     },
     {
       title: 'Gender',
       field: 'gender',
-      render: renderGender
+      render: renderGender,
     },
     {
       title: 'Address',
       field: 'address',
-      render: renderAddress
-    }
-  ];
+      render: renderAddress,
+    },
+];
 
-  const data = [
+const data = [
     {
-      name: 'John Brown',
-      gender: 'male',
-      address: 'osaka-japan'
+        name: 'John Brown',
+        gender: 'male',
+        address: 'osaka-japan',
     },
     {
-      name: 'Jim Green',
-      gender: 'female',
-      address: 'tokyo-japan'
+        name: 'Jim Green',
+        gender: 'female',
+        address: 'tokyo-japan',
     },
     {
-      name: 'Joe Black',
-      gender: 'male',
-      address: 'hochiminh-vietnam'
-    }
-  ];
+        name: 'Joe Black',
+        gender: 'male',
+        address: 'hochiminh-vietnam',
+    },
+];
 
-  const table = new Kuc.Table({ columns, data });
-  const space = kintone.app.record.getSpaceElement('space');
-  space.appendChild(table);
+const table = new Kuc.Table({columns, data});
+const space = kintone.app.record.getSpaceElement('space');
+space.appendChild(table);
   ```
 </details>
 
 ### Multiple components in one cell (Table)
-![multi-components](../assets/two-component-in-cell.png)
+![multi-components](/img/two-component-in-cell.png)
 
 Put multiple components in one table cell using the `columns.render` function.<br/>
 You can display two dropdowns (city and country) in the same cell.
@@ -247,20 +248,20 @@ You can display two dropdowns (city and country) in the same cell.
       items: [
         {
           label: 'Tokyo',
-          value: 'tokyo'
+          value: 'tokyo',
         },
         {
           label: 'Osaka',
-          value: 'osaka'
+          value: 'osaka',
         },
         {
           label: 'Ho Chi Minh',
-          value: 'hochiminh'
-        }
+          value: 'hochiminh',
+        },
       ],
-      value: city
+      value: city,
     });
-    dropdownCity.addEventListener('change', event => {
+    dropdownCity.addEventListener('change', (event) => {
       const _country = rowData.address.split('-')[1];
       event.detail.value = `${event.detail.value}-${_country}`;
     });
@@ -269,16 +270,16 @@ You can display two dropdowns (city and country) in the same cell.
       items: [
         {
           label: 'Viet Nam',
-          value: 'vietnam'
+          value: 'vietnam',
         },
         {
           label: 'Japan',
-          value: 'japan'
-        }
+          value: 'japan',
+        },
       ],
-      value: country
+      value: country,
     });
-    dropdownCountry.addEventListener('change', event => {
+    dropdownCountry.addEventListener('change', (event) => {
       const _city = rowData.address.split('-')[0];
       event.detail.value = `${_city}-${event.detail.value}`;
     });
@@ -295,40 +296,40 @@ You can display two dropdowns (city and country) in the same cell.
     {
       name: 'John Brown',
       gender: 'male',
-      address: 'osaka-japan'
+      address: 'osaka-japan',
     },
     {
       name: 'Jim Green',
       gender: 'female',
-      address: 'tokyo-japan'
+      address: 'tokyo-japan',
     },
     {
       name: 'Joe Black',
       gender: 'male',
-      address: 'hochiminh-vietnam'
-    }
+      address: 'hochiminh-vietnam',
+    },
   ];
 
   const columns = [
     {
       title: 'Name',
-      field: 'name'
+      field: 'name',
     },
     {
       title: 'Address',
       field: 'address',
-      render: renderAddress
-    }
+      render: renderAddress,
+    },
   ];
 
-  const table = new Kuc.Table({ columns, data });
-  const space = kintone.app.record.getSpaceElement('space');
-  space.appendChild(table);
+const table = new Kuc.Table({columns, data});
+const space = kintone.app.record.getSpaceElement('space');
+space.appendChild(table);
   ```
 </details>
 
 ### Dependent columns (Table)
-![dependent-columns](../assets/dependent-columns.gif)
+![dependent-columns](/img/dependent-columns.gif)
 
 Develop the dependent columns.<br/>
 The city dropdown will be updated when the country dropdown is changed.
@@ -337,35 +338,35 @@ The city dropdown will be updated when the country dropdown is changed.
   <summary>Show code</summary>
 
   ```js
-  // Each country will have corresponding cities
-  const relatedData = {
+// Each country will have corresponding cities
+const relatedData = {
     japan: [
-      { label: 'Tokyo', value: 'tokyo' },
-      { label: 'Osaka', value: 'osaka' }
+        {label: 'Tokyo', value: 'tokyo'},
+        {label: 'Osaka', value: 'osaka'},
     ],
     vietnam: [
-      { label: 'Ha Noi', value: 'hanoi' },
-      { label: 'Ho Chi Minh', value: 'hochiminh' }
-    ]
-  };
+        {label: 'Ha Noi', value: 'hanoi'},
+        {label: 'Ho Chi Minh', value: 'hochiminh'},
+    ],
+};
 
-  const renderCity = (cellData, rowData) => {
+const renderCity = (cellData, rowData) => {
     const dropdownCity = new Kuc.Dropdown({
       items: [
         {
           label: 'Tokyo',
-          value: 'tokyo'
+          value: 'tokyo',
         },
         {
           label: 'Ho Chi Minh',
-          value: 'hochiminh'
-        }
+          value: 'hochiminh',
+        },
       ],
-      value: cellData
+      value: cellData,
     });
 
     // Logic update city when country column changed
-    lastRenderedCountryComponent.addEventListener('change', event => {
+    lastRenderedCountryComponent.addEventListener('change', (event) => {
       dropdownCity.items = relatedData[event.detail.value];
       rowData.city = '';
     });
@@ -374,19 +375,19 @@ The city dropdown will be updated when the country dropdown is changed.
   };
 
   let lastRenderedCountryComponent;
-  const renderCountry = cellData => {
+  const renderCountry = (cellData) => {
     const dropdownCountry = new Kuc.Dropdown({
       items: [
         {
           label: 'Viet Nam',
-          value: 'vietnam'
+          value: 'vietnam',
         },
         {
           label: 'Japan',
-          value: 'japan'
-        }
+          value: 'japan',
+        },
       ],
-      value: cellData
+      value: cellData,
     });
     lastRenderedCountryComponent = dropdownCountry;
     return dropdownCountry;
@@ -396,34 +397,34 @@ The city dropdown will be updated when the country dropdown is changed.
     {
       title: 'Country',
       field: 'country',
-      render: renderCountry
+      render: renderCountry,
     },
     {
       title: 'City',
       field: 'city',
-      render: renderCity
-    }
+      render: renderCity,
+    },
   ];
 
   const data = [
     {
       country: 'japan',
-      city: 'tokyo'
+      city: 'tokyo',
     },
     {
       country: 'vietnam',
-      city: 'hochiminh'
-    }
+      city: 'hochiminh',
+    },
   ];
 
-  const table = new Kuc.Table({ columns, data });
-  const space = kintone.app.record.getSpaceElement('space');
-  space.appendChild(table);
+const table = new Kuc.Table({columns, data});
+const space = kintone.app.record.getSpaceElement('space');
+space.appendChild(table);
   ```
 </details>
 
 ### Nested tables (Table)
-![table-in-table](../assets/table-in-table.png)
+![table-in-table](/img/table-in-table.png)
 
 Show more detailed info on every row with nested tables.
 
@@ -431,26 +432,26 @@ Show more detailed info on every row with nested tables.
   <summary>Show code</summary>
 
   ```js
-  const renderCity = cellData => {
+  const renderCity = (cellData) => {
     const dropdown = new Kuc.Dropdown({
       items: [
-        { label: 'Tokyo', value: 'tokyo' },
-        { label: 'Ho Chi Minh', value: 'hochiminh' }
+        {label: 'Tokyo', value: 'tokyo'},
+        {label: 'Ho Chi Minh', value: 'hochiminh'},
       ],
-      value: cellData
+      value: cellData,
     });
 
     return dropdown;
   };
 
-  const renderCountry = cellData => {
-    const renderSubTable = cellDataSubTable => {
+  const renderCountry = (cellData) => {
+    const renderSubTable = (cellDataSubTable) => {
       const dropdown = new Kuc.Dropdown({
         items: [
-          { label: 'Japan', value: 'japan' },
-          { label: 'Viet Nam', value: 'vietnam' }
+          {label: 'Japan', value: 'japan'},
+          {label: 'Viet Nam', value: 'vietnam'},
         ],
-        value: cellDataSubTable
+        value: cellDataSubTable,
       });
       return dropdown;
     };
@@ -459,20 +460,20 @@ Show more detailed info on every row with nested tables.
       {
         title: 'Sub Table',
         field: 'dropdown',
-        render: renderSubTable
-      }
+        render: renderSubTable,
+      },
     ];
 
     const dataSubTable = [];
     for (let i = 0; i < cellData.split(',').length; i++) {
-      dataSubTable.push({ dropdown: cellData.split(',')[i] });
+      dataSubTable.push({dropdown: cellData.split(',')[i]});
     }
     const subTable = new Kuc.Table({
       columns: columnsSubTable,
-      data: dataSubTable
+      data: dataSubTable,
     });
 
-    subTable.addEventListener('change', subTableEvent => {
+    subTable.addEventListener('change', (subTableEvent) => {
       const _dataSubTable = subTableEvent.detail.data;
       let countries = '';
       for (let i = 0; i < _dataSubTable.length; i++) {
@@ -490,27 +491,27 @@ Show more detailed info on every row with nested tables.
     {
       title: 'Country',
       field: 'country',
-      render: renderCountry
+      render: renderCountry,
     },
     {
       title: 'City',
       field: 'city',
-      render: renderCity
-    }
+      render: renderCity,
+    },
   ];
 
   const data = [
     {
       city: 'tokyo',
-      country: 'japan'
+      country: 'japan',
     },
     {
       city: 'hochiminh',
-      country: 'vietnam'
-    }
+      country: 'vietnam',
+    },
   ];
 
-  const table = new Kuc.Table({ columns, data });
+  const table = new Kuc.Table({columns, data});
   const space = kintone.app.record.getSpaceElement('space');
   space.appendChild(table);
   ```
