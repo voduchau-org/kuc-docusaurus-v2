@@ -18,7 +18,6 @@ const config = {
   onBrokenLinks: 'warn', // throw
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/kuc_box_yellow.png',
-  deploymentBranch: "SSR-3217_MigrateDocusaurusFromV1ToV2",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
