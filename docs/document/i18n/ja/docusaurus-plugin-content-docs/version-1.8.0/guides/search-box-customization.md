@@ -143,5 +143,7 @@ kintone.api(kintone.api.url('/k/v1/records', true), 'GET', params).then(resp => 
 いかがでしたでしょうか。kintone UI Component を使って、検索ボックスの作り方を紹介しました。<br/>
 kintone UI Component を使って、便利に kintone カスタマイズを開発していただければ幸いです。
 
-> 本記事は、 2021 年 2 月時点の kintone と Google Chrome で確認したものになります。<br/>
-> また、カスタマイズに使用した kintone UI Component のバージョンは、v1.0.0 です。
+:::info
+本記事は、 2021 年 2 月時点の kintone と Google Chrome で確認したものになります。<br/>
+また、カスタマイズに使用した kintone UI Component のバージョンは、v1.0.0 です。
+:::

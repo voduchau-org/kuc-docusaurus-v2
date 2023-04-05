@@ -33,9 +33,11 @@ import { DatePickerComponent } from "@site/static/js/samples/desktop/date-picker
 | requiredIcon | boolean | false | コンポーネントの必須アイコン表示/非表示設定 | |
 | visible | boolean | true | コンポーネントの表示/非表示設定 | |
 
-> *1: 表示される日付のフォーマットは、language プロパティの設定に応じて以下のように自動的に切り替わる。
-> - "en" の場合: MM/DD/YYYY
-> - "ja", "zh", "zh-TW" の場合: YYYY-MM-DD
+:::info
+*1: 表示される日付のフォーマットは、language プロパティの設定に応じて以下のように自動的に切り替わる。
+ - "en" の場合: MM/DD/YYYY
+ - "ja", "zh", "zh-TW" の場合: YYYY-MM-DD
+:::
 
 ### Event
 
