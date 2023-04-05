@@ -12,6 +12,17 @@
   --ifm-navbar-link-color: #ffffff;
   --ifm-navbar-link-hover-color: #cccccc;
   --ifm-footer-link-hover-color: #cccccc;
+  --ifm-link-color: #3498db;
+  --ifm-link-hover-color: rgba(52,152,219,.792156862745098);
+  --ifm-link-hover-decoration: none;
+  --ifm-link-decoration: none;
+}
+
+.alert {
+  --ifm-link-color: #3498db;
+  --ifm-link-hover-color: rgba(52,152,219,.792156862745098);
+  --ifm-link-hover-decoration: none;
+  --ifm-link-decoration: none;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
