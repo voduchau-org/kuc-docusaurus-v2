@@ -18,11 +18,11 @@ const config = {
   onBrokenLinks: 'warn', // throw
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/kuc_box_yellow.png',
-
+  deploymentBranch: "SSR-3217_MigrateDocusaurusFromV1ToV2",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Cybozu-SD', // Usually your GitHub org/user name.
+  organizationName: 'voduchau-org', // Usually your GitHub org/user name.
   projectName: 'kuc-docusaurus-v2', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
