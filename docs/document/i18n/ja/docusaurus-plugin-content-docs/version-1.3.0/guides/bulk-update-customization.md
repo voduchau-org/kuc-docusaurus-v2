@@ -20,7 +20,7 @@ UI 周りに kintone UI Component を使用することで、kintone にマッ�
 
 以下が、画面の完成イメージです。
 
-![Bulk Update](assets/bulk_update.gif)
+![Bulk Update](/img/bulk_update.gif)
 
 ## 事前準備
 

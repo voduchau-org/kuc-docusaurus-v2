@@ -23,14 +23,14 @@ kintone のアプリ画面だけでなく、プラグインの設定画面でも
 
 会社の決算日をプラグイン設定画面で設定し、本日の日付が決算日以前のレコードの特定フィールドを赤くするカスタマイズをプラグイン化します。
 
-![Plugin setting](assets/plugin_setting.png)
+![Plugin setting](/img/plugin_setting.png)
 プラグイン設定画面です。<br/>
 設定した条件（本日の日付が基準日付より前、または基準日付より後）を満たすと、設定したフィールドの色がレコード詳細画面で赤色に変わります。
 
-![Confirmation](assets/dialog.png)
+![Confirmation](/img/dialog.png)
 設定を保存する際に、確認ダイアログを表示します。
 
-![App image](assets/payment_management_app.png)
+![App image](/img/payment_management_app.png)
 入金を管理するアプリです。<br/>
 プラグイン設定画面で設定した条件に応じてフィールドの背景色が変わります。
 
@@ -345,7 +345,7 @@ cancelButton.addEventListener("click", event => {
 
 意図しない設定の保存を避けるため、保存ボタンクリックの後に確認ダイアログを挟みます。<br/>
 
-![Confirmation](assets/dialog.png)
+![Confirmation](/img/dialog.png)
 
 OK ボタンを押すと、プラグインに設定値として持たせたい情報をオブジェクトに格納し、プラグインに保存します。
 

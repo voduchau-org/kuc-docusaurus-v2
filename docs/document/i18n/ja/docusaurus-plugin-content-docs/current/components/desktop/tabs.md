@@ -25,7 +25,7 @@ import { TabsComponent } from "@site/static/js/samples/desktop/tabs.js"
 | :--- | :--- | :--- | :--- | :--- |
 | className | string | "" | コンポーネントの class 名 ||
 | id | string | "" | コンポーネントの id 名 ||
-| value | string | ""  | 選択されているタブ | <li>items 内に一致する value がある場合、disabled でもそのタブが表示される<li>以下の場合は最初の visible タブが表示される<ul><li>items 内に一致する value がない場合<li>items 内に一致する value があるが、そのタブが visible ではない場合</ul><li>value が文字列以外の場合、エラーを出力する |
+| value | string | ""  | 選択されているタブ | <li>items 内に一致する value がある場合、disabled でもそのタブが表示される</li><li>以下の場合は最初の visible タブが表示される<ul><li>items 内に一致する value がない場合</li><li>items 内に一致する value があるが、そのタブが visible ではない場合</li></ul></li><li>value が文字列以外の場合、エラーを出力する</li> |
 | borderVisible | boolean | true  | 表示内容を囲う枠線の表示/非表示設定 | |
 | visible | boolean | true | コンポーネントの表示/非表示設定 | |
 | items | Array\<[Item](#item)\> | [] | 表示するタブのリスト | items が配列以外の場合、エラーを出力する |

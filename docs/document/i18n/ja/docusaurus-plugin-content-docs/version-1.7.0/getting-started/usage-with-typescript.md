@@ -89,12 +89,12 @@ npm run build
 ```
 
 ブラウザで `dist` ディレクトリの `index.html` を開きます。問題がなければ、ページに Dropdown コンポーネントが表示されます。
-![dropdown image](assets/kuc-dropdown.png)
+![dropdown image](/img/kuc-dropdown.png)
 KUC は TypeScript で書かれていて型定義も充実しているので、以下のようにプロパティのサジェスチョンや型チェックを活用できます。
 
-![dropdown param image](assets/kuc-dropdown-param.png)
+![dropdown param image](/img/kuc-dropdown-param.png)
 
-![dropdown props image](assets/kuc-dropdown-props.png)
+![dropdown props image](/img/kuc-dropdown-props.png)
 
 アプリケーションを開発するために、KUC のコンポーネントを自由に選択し、以下の型定義を利用できるようになります。
 - Items プロパティ (ex: DropdownItem)

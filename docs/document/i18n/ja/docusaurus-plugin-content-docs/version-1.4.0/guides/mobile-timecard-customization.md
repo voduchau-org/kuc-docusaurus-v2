@@ -13,9 +13,9 @@ original_id: mobile-timecard-customization
 
 以下が、画面の完成イメージです。
 
-![タイムカード](assets/timecard.png)
+![タイムカード](/img/timecard.png)
 <br/>
-![打刻メッセージ](assets/timecard_notification.png)
+![打刻メッセージ](/img/timecard_notification.png)
 
 ## JavaScript/CSS カスタマイズ
 

@@ -21,7 +21,7 @@ original_id: attachment-customization
 ## 完成イメージ
 
 以下が画面の完成イメージです。
-![attachment customize](assets/attachment_customize.gif)
+![attachment customize](/img/attachment_customize.gif)
 
 ## 事前準備
 

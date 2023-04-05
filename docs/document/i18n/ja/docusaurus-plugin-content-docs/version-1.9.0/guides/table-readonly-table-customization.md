@@ -60,7 +60,7 @@ space.appendChild(table);
 ```
 
 ### UI 上に表示
-![render](assets/table-edit-text.gif)
+![render](/img/table-edit-text.gif)
 
 最初のセルの入力値を編集した場合、Text コンポーネントは `detail.value = 'user1 edited'` を含む `change` イベントをトリガーします。
 そしてテーブルは値を受け取り、`username` field に登録し直します。
@@ -94,7 +94,7 @@ const renderName = (cellData) => {
 ### 基本的な使い方
 
 #### ReadOnlyTable
-![readonly-table](assets/readonly-table.png)
+![readonly-table](/img/readonly-table.png)
 
 読み取り専用のテーブルを表示します。
 
@@ -142,7 +142,7 @@ space.appendChild(readOnlyTable);
 </details>
 
 #### Table
-![table](assets/table.png)
+![table](/img/table.png)
 
 表示されているコンポーネントを操作できるテーブルを表示します。<br/>
 `columns.render` 関数を使って、セルに表示されるコンポーネントを設定します。以下のサンプルコードの `renderGender` と `renderAddress` 関数を確認してください。
@@ -233,7 +233,7 @@ space.appendChild(table);
 </details>
 
 ### 一つのセルに複数のコンポーネント表示（Table）
-![multi-components](assets/two-component-in-cell.png)
+![multi-components](/img/two-component-in-cell.png)
 
 `columns.render` 関数を使って、一つのセルに複数のコンポーネントを表示します。<br/>
 以下のサンプルコードでは、同じセル内に 2つの Dropdown（city と country）を表示します。
@@ -333,7 +333,7 @@ space.appendChild(table);
 
 
 ### 依存列（Table）
-![dependent-columns](assets/dependent-columns.gif)
+![dependent-columns](/img/dependent-columns.gif)
 
 依存列を作ります。<br/>
 country Dropdown の値が変更されたら city Dropdown の値が変更されます。
@@ -428,7 +428,7 @@ space.appendChild(table);
 </details>
 
 ### 入れ子テーブル（Table）
-![table-in-table](assets/table-in-table.png)
+![table-in-table](/img/table-in-table.png)
 
 入れ子テーブルを作って各行にさらに詳細な情報を表示します。
 

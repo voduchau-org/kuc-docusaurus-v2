@@ -12,11 +12,11 @@ kintone UI Component は、kintone カスタマイズやプラグインの UI �
 
 ### Desktop 用コンポーネント例
 
-![desktop components](assets/desktop_components.png)
+![desktop components](/img/desktop_components.png)
 
 ### Mobile 用コンポーネント例
 
-![mobile components](assets/mobile_components.png)
+![mobile components](/img/mobile_components.png)
 
 ## 下準備：アプリ作成
 
@@ -64,7 +64,7 @@ kintone.events.on('app.record.index.show', event => {
 
 3. `index.js` を kintone アプリ設定の `JavaScript /CSS でカスタマイズ`にアップロードしてカスタマイズを適用します。（[JavaSriptやCSSでアプリをカスタマイズする](https://jp.cybozu.help/k/ja/user/app_settings/js_customize.html)）
 
-![button customize](assets/button_customize.png)
+![button customize](/img/button_customize.png)
 
 ### CDN を利用する
 
@@ -156,7 +156,7 @@ npm run build:webpack
 
 6. 上記でバンドルしたファイルを、作成した kintone アプリ設定の `JavaScript /CSS でカスタマイズ`にアップロードしてカスタマイズを適用します。（[JavaSriptやCSSでアプリをカスタマイズする](https://jp.cybozu.help/k/ja/user/app_settings/js_customize.html)）
 
-![button customize](assets/button_customize.png)
+![button customize](/img/button_customize.png)
 
 ## ブラウザ対応状況
 

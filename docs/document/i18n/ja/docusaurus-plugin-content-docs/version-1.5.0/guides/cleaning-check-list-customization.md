@@ -21,7 +21,7 @@ original_id: cleaning-check-list-customization
 
 以下が、画面の完成イメージです。
 
-![Cleaning Check List](assets/cleaning_check_list.png)
+![Cleaning Check List](/img/cleaning_check_list.png)
 
 ## JavaScript/CSS カスタマイズ
 

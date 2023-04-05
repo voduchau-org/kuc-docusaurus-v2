@@ -16,16 +16,16 @@ v1.3.2 以前のリリースバージョンにおいて kintone UI Component（K
 KUC では [Web Components](https://developer.mozilla.org/ja/docs/Web/Web_Components) を利用しており、[custom HTML タグ](https://developer.mozilla.org/ja/docs/Web/Web_Components/Using_custom_elements)を定義することでコンポーネントを生成しています。その際に使っている [CustomElementRegistry](https://developer.mozilla.org/ja/docs/Web/API/CustomElementRegistry) がグローバルな window オブジェクトであり、Web Components では既に登録されている custom HTML タグ を再定義することができません。<br/>
 KUC パッケージが custom HTML タグ を登録する際、後から読み込まれたパッケージも同じタグを定義しようとするので、正常に動作しなくなるという問題が起きていました。
 
-![複数のパッケージが同じ custom HTML タグを定義](assets/version-conflict-diagram.jpeg)
+![複数のパッケージが同じ custom HTML タグを定義](/img/version-conflict-diagram.jpeg)
 
 ## 解決策
 
 既に登録されている custom HTML タグを再定義することはできないので、v1.4.0 からは custom HTML タグにバージョン番号を含める対応を入れました。この変更は、CSS スタイルのコンフリクトを解消するためにクラス名にも適用しています。
 
-![Custom HTML tag の例](assets/version-conflict-html-tag.png)
+![Custom HTML tag の例](/img/version-conflict-html-tag.png)
 <center>タグとクラス名にバージョン番号を含める</center>
 
-![CSS の例](assets/version-conflict-css.png)
+![CSS の例](/img/version-conflict-css.png)
 <center>コンポーネントの CSS にもバージョン番号が含まれる</center>
 
 加えて、custom HTML タグを定義する前に既に同じものが登録されているかどうかも判定するようにしました。
@@ -70,7 +70,7 @@ v1.3.2 以前のバージョンを利用する場合、以下のようなコン�
 例えば、v1.2.0 の kuc.min.js を kintone に読み込んだ後に v1.3.0 の kuc.min.js をアプリに読み込みます。
 KUC の Button コンポーネントを呼び出そうとすると、Illegal constructor エラーが発生します。
 
-![複数の kuc.min.js ファイルを読み込むと Illegal constructor エラーが発生](assets/UMD_multi_files.jpeg)
+![複数の kuc.min.js ファイルを読み込むと Illegal constructor エラーが発生](/img/UMD_multi_files.jpeg)
 
 ### v1.4.0 以降のバージョンの利用者向け
 
