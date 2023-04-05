@@ -34,7 +34,9 @@ import { AttachmentComponent } from "@site/static/js/samples/desktop/attachment.
 | File.name | string | "" | ファイル名 | |
 | File.size | string | "" | ファイルサイズ | ファイルサイズに応じて以下のように記載される<li>size >= 1073741824: xxx GB</li><li>1073741824 > size >= 1048576: xxx MB</li><li>1048576 > size >= 1024: xxx KB</li><li>1024 > size: xxx bytes</li> |
 
-> *1: "参照" ボタンと "ここにファイルをドロップします" のテキストは language プロパティの値に応じて切り替わる.
+:::info
+*1: "参照" ボタンと "ここにファイルをドロップします" のテキストは language プロパティの値に応じて切り替わる.
+:::
 
 ### Event
 

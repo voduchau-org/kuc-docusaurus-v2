@@ -135,9 +135,8 @@ Create a file like the one below. Place each part of Kintone UI Component by usi
 This section will explain the implementation code of the settings page.<br/>
 Place the JavaScript file (config.js) described below in the js folder.<br/>
 
-***config.js***
 
-```javascript
+```javascript title="config.js"
 (async PLUGIN_ID => {
   // Write the process here
 })(kintone.$PLUGIN_ID);
@@ -377,9 +376,8 @@ The value is inherited from the component of the plug-in settings page and used 
 Since the value of the DatePicker component is in yyyy-mm-dd format, today's date is also retrieved in yyyy-mm-dd format for easy comparison.<br/>
 An external date library called luxon.js is used for this customization.
 
-***desktop.js***
 
-```javascript
+```javascript title="desktop.js"
 (PLUGIN_ID => {
   kintone.events.on("app.record.detail.show", event => {
     const CONFIG = kintone.plugin.app.getConfig(PLUGIN_ID);
@@ -413,5 +411,7 @@ An external date library called luxon.js is used for this customization.
 This article introduced a simple plug-in implementation as an example.<br/>
 Depending on the customization, it is possible to divide the conditions more finely and to apply conditional formatting to the Record List page. Please try adjusting it according to your actual operations.<br/>
 
-> This article was reviewed using Kintone and Google Chrome as of August 2022.<br/>
-> The version of Kintone UI Component used in this customization is v1.4.0.
+:::info
+This article was reviewed using Kintone and Google Chrome as of August 2022.<br/>
+The version of Kintone UI Component used in this customization is v1.4.0.
+:::

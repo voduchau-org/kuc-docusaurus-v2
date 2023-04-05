@@ -6,8 +6,7 @@ original_id: usage-with-typescript
 ---
 ## Overview
 
-You can add static typing to JavaScript to improve developer productivity and code quality thanks to TypeScript.
-<br/>
+You can add static typing to JavaScript to improve developer productivity and code quality thanks to TypeScript.<br/>
 In this guide, you can learn how to integrate Kintone UI Component (KUC) with TypeScript and webpack.
 
 ## Install and configuration

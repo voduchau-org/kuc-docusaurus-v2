@@ -35,7 +35,9 @@ Here is a list of properties that can be used for modifying the component:
 | File.name | string | "" | File name | |
 | File.size | string | "" | File size | There are 4 types to show the size:<li>size >= 1073741824: xxx GB</li><li>1073741824 > size >= 1048576: xxx MB</li><li>1048576 > size >= 1024: xxx KB</li><li>1024 > size: xxx bytes</li> |
 
-> *1: The text of "Browse" button and "Drag & drop zone" will be changed according to the `language` property.
+:::info
+*1: The text of "Browse" button and "Drag & drop zone" will be changed according to the `language` property.
+:::
 
 ### Event
 

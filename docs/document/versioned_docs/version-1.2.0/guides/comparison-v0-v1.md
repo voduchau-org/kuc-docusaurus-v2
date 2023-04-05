@@ -287,7 +287,11 @@ const checkbox = new Kuc.Checkbox({
 How is it working out for you?<br/>
 We hope you will experience a better Kintone development than ever before using the new Kintone UI Component library.
 
-> This article was reviewed by Kintone and Google Chrome as of February, 2021.<br/>
-> In addition, the version of Kintone UI Component that is used for customizations is v0.7.4 and v1.0.0.
+:::info
+This article was reviewed by Kintone and Google Chrome as of February, 2021.<br/>
+In addition, the version of Kintone UI Component that is used for customizations is v0.7.4 and v1.0.0.
+:::
 
-> The documentation for v0 is a separate site.Please check [here](https://kintone-labs.github.io/kintone-ui-component/latest/).
+:::info
+The documentation for v0 is a separate site.Please check [here](https://kintone-labs.github.io/kintone-ui-component/latest/).
+:::

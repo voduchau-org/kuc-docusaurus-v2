@@ -517,5 +517,7 @@ Show more detailed info on every row with nested tables.
   ```
 </details>
 
-> This article was reviewed by Kintone and Google Chrome as of February 2023.<br/>
-> In addition, the version of Kintone UI Component that is used for customizations is v1.9.0.
+:::info
+This article was reviewed by Kintone and Google Chrome as of February 2023.<br/>
+In addition, the version of Kintone UI Component that is used for customizations is v1.9.0.
+:::

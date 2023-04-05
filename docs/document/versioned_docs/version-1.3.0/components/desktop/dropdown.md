@@ -36,16 +36,18 @@ Here is a list of properties that can be used for modifying the component:
 | Item.label | string | null | Text label for each option | If `Item.label` is unspecified, the value of `Item.value` is displayed on the UI |
 | Item.value | string | null | Value of each option | Can set duplicated value in `Item.value` |
 
-> *1: You can set duplicated value in `Item.value`. In case setting duplicated value, you can handle selected item using `value` and `selectedIndex` property.<br/>
-> Example: When setting `items = [{label: 'Orange', value: 'fruit'}, {label: 'Apple', value: 'fruit'}, {label: 'Carrot', value: 'vegetable'}]`
->
-> - If setting `value` and not setting `selectedIndex` as follows:
->   - value = 'fruit': The first item will be selected.
->   - value = 'other': No item will be selected.
->
-> - If not setting `value` and setting `selectedIndex` as follows:
->   - selectedIndex = 1: The second item will be selected.
->   - selectedIndex = 99: No item will be selected.
+:::info
+ *1: You can set duplicated value in `Item.value`. In case setting duplicated value, you can handle selected item using `value` and `selectedIndex` property.<br/>
+ Example: When setting `items = [{label: 'Orange', value: 'fruit'}, {label: 'Apple', value: 'fruit'}, {label: 'Carrot', value: 'vegetable'}]`
+
+ - If setting `value` and not setting `selectedIndex` as follows:
+   - value = 'fruit': The first item will be selected.
+   - value = 'other': No item will be selected.
+
+ - If not setting `value` and setting `selectedIndex` as follows:
+   - selectedIndex = 1: The second item will be selected.
+   - selectedIndex = 99: No item will be selected.
+:::
 
 ### Event
 

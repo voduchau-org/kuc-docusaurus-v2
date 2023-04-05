@@ -197,5 +197,7 @@ The Notification component displays an error message when an error occurs during
 });
 ```
 
-> This article was reviewed using Kintone and Google Chrome as of January 2022.<br/>
-> The version of Kintone UI Component used in this customization is v1.3.0.
+:::info
+This article was reviewed using Kintone and Google Chrome as of January 2022.<br/>
+The version of Kintone UI Component used in this customization is v1.3.0.
+:::

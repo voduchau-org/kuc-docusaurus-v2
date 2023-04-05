@@ -83,8 +83,10 @@ Once the CDN is being imported to the app, you will have access to the global ob
 
 2. The following is the same as the UMD.
 
-> unpkg is not a CDN service provided by Cybozu. It is recommended that you use this for verification.<br/>
-> In the production environment, you can use the `kuc.min.js` of the UMD to avoid any failures and problems related to unpkg.
+:::tip
+unpkg is not a CDN service provided by Cybozu. It is recommended that you use this for verification.<br/>
+In the production environment, you can use the `kuc.min.js` of the UMD to avoid any failures and problems related to unpkg.
+:::
 
 ### Use the npm package
 
@@ -96,7 +98,9 @@ npm install kintone-ui-component
 npm install webpack
 ```
 
-> If necessary, install `babel-loader` and `css-loader`.
+:::tip
+If necessary, install `babel-loader` and `css-loader`.
+:::
 
 2. Import the components you want to use, and create a `index.js` files under `src` folder.
 
