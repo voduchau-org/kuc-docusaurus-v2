@@ -288,7 +288,11 @@ const checkbox = new Kuc.Checkbox({
 いかがでしたでしょうか。<br/>
 進化した kintone UI Component を使って、これまで以上にスマートな kintone 開発を体験していただければ幸いです。
 
-> 本記事は、 2021 年 2 月時点の kintone と Google Chrome で確認したものになります。<br/>
-> また、カスタマイズに使用した kintone UI Component のバージョンは、v0.7.4 および v1.0.0 です。
+:::info
+本記事は、 2021 年 2 月時点の kintone と Google Chrome で確認したものになります。<br/>
+また、カスタマイズに使用した kintone UI Component のバージョンは、v0.7.4 および v1.0.0 です。
+:::
 
-> v0 のドキュメントは別サイトになりますので、[こちら](https://kintone-labs.github.io/kintone-ui-component/latest/)よりご確認ください。
+:::info
+v0 のドキュメントは別サイトになりますので、[こちら](https://kintone-labs.github.io/kintone-ui-component/latest/)よりご確認ください。
+:::

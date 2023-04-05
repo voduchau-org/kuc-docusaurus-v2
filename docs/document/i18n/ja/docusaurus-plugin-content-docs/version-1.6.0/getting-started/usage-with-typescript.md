@@ -6,8 +6,7 @@ original_id: usage-with-typescript
 ---
 ## 概要
 
-TypeScript を使うと、JavaScript に静的型付けを追加して開発者の生産性とコードの品質を向上させることができます。
-<br/>
+TypeScript を使うと、JavaScript に静的型付けを追加して開発者の生産性とコードの品質を向上させることができます。<br/>
 このガイドでは、TypeScript と webpack を使って kintone UI Component（KUC）のカスタマイズ方法を学習できます。
 
 ## インストールと構成

@@ -40,7 +40,9 @@ CSS セレクターを使って `--my-background` に値を指定することが
 <my-element id="sample-id"></my-element>
 ```
 
-> 各コンポーネントの **Custom CSS** 欄にて CSS カスタムプロパティの一覧をご確認ください。
+:::tip
+各コンポーネントの **Custom CSS** 欄にて CSS カスタムプロパティの一覧をご確認ください。
+:::
 
 ## サンプルコード
 

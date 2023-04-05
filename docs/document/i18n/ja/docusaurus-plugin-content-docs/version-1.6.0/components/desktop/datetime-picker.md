@@ -37,9 +37,11 @@ import { DateTimePickerComponent } from "@site/static/js/samples/desktop/datetim
 | visible | boolean | true | コンポーネントの表示/非表示設定 | |
 | timeStep | number | 30 | 時刻リスト内の時刻間隔の設定 | 単位は分（正の整数）<br/>小数点以下を指定した場合は、最も近い整数に丸められる<br/>数値以外の値や max と min プロパティの時刻差異よりも大きな値を指定した場合、エラーを出力する |
 
-> *1: 表示される日付のフォーマットは、language プロパティの設定に応じて以下のように自動的に切り替わる。
-> - "en" の場合: MM/DD/YYYY
-> - "ja", "zh", "zh-TW" の場合: YYYY-MM-DD
+:::info
+*1: 表示される日付のフォーマットは、language プロパティの設定に応じて以下のように自動的に切り替わる。
+ - "en" の場合: MM/DD/YYYY
+ - "ja", "zh", "zh-TW" の場合: YYYY-MM-DD
+:::
 
 ### Event
 

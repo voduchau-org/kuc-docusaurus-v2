@@ -36,16 +36,18 @@ import { MobileDropdownComponent } from "@site/static/js/samples/mobile/dropdown
 | Item.label | string | null | 各選択肢のテキスト | Item.label が未指定の場合、UI 上は Item.value の値が表示される |
 | Item.value | string | null | 各選択肢の値 | Item.value に重複の値を指定できる |
 
-> *1: Item.value に重複した値を指定できる。重複した値を指定する場合、value と selectedIndex プロパティを使って制御することができる。<br/>
-> 例: `items = [{label: 'Orange', value: 'fruit'}, {label: 'Apple', value: 'fruit'}, {label: 'Carrot', value: 'vegetable'}]` を指定する
->
-> - 以下のように value を指定、selectedIndex を未指定の場合:
->   - value = 'fruit': 最初の値が選択される。
->   - value = 'other': 何も選択されない。
->
-> - 以下のように value を未指定、selectedIndex を指定する場合:
->   - selectedIndex = 1: 2番目の値が選択される。
->   - selectedIndex = 99: 何も選択されない。
+:::info
+*1: Item.value に重複した値を指定できる。重複した値を指定する場合、value と selectedIndex プロパティを使って制御することができる。<br/>
+ 例: `items = [{label: 'Orange', value: 'fruit'}, {label: 'Apple', value: 'fruit'}, {label: 'Carrot', value: 'vegetable'}]` を指定する
+
+ - 以下のように value を指定、selectedIndex を未指定の場合:
+   - value = 'fruit': 最初の値が選択される。
+   - value = 'other': 何も選択されない。
+
+ - 以下のように value を未指定、selectedIndex を指定する場合:
+   - selectedIndex = 1: 2番目の値が選択される。
+   - selectedIndex = 99: 何も選択されない。
+:::
 
 ### Event
 
