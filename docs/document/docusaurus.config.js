@@ -13,8 +13,8 @@ function getLatestVersionName() {
 const config = {
   title: 'Be a smart Kintone developer with Kintone UI Component.',
   tagline: 'It will support your UI customization project.',
-  url: 'https://voduchau-org.github.io',
-  baseUrl: '/kuc-docusaurus-v2',
+  url: 'https://voduchau-org.github.io/',
+  baseUrl: '/kuc-docusaurus-v2/',
   onBrokenLinks: 'warn', // throw
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/kuc_box_yellow.png',
