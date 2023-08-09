@@ -24,6 +24,6 @@ jobs:
           crawler-user-id: "3070a934-5586-4b17-83e7-ba15a64e0602"
           crawler-api-key: "b891226f5e335e1d0307819a93b3a7c7"
           algolia-app-id: "QJ2QB6FCE5"
-          algolia-api-key: "2271cb8646ebe78188b96fba4008e0ad"
+          algolia-api-key: "636c5f8d218f77cc2f87c81fbd95a9b8"
           site-url: "https://cybozu-sd.github.io/kuc-docusaurus-v2/"
           override-config: true
