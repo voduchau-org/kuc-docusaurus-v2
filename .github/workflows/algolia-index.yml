@@ -1,8 +1,12 @@
 name: Github Pages -> Algolia Crawler
+# on:
+#   push:
+#     branches: [test-co]
 on:
-  push:
-    branches: [test-co]
-
+  workflow_run:
+    workflows: ["Deploy Document Workflow"]
+    types:
+      - completed
 jobs:
   algolia_recrawl:
     name: Algolia Recrawl

@@ -1,4 +1,4 @@
-name: Deployment Workflow A
+name: Deploy Document Workflow
 
 on:
   push:
@@ -12,10 +12,10 @@ jobs:
     steps:
       # Deployment steps here
       - name: Sleep for 60s
-        run: sleep 60
+        run: sleep 80
 
       - name: Trigger Workflow B
-        uses: actions/workflow_run@v2
+        uses: peter-evans/repository-dispatch@v2
         with:
-          workflow: Github Pages -> Algolia Crawler # Replace with the name of your b.yml workflow
           token: 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
+          event-type: trigger-b-workflow
