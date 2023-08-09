@@ -1,11 +1,10 @@
-name: Algolia Recrawl Example
-
+name: Github Pages -> Algolia Crawler
 on:
   push:
     branches: [test-co]
 
 jobs:
-  algolia_crawl:
+  algolia_recrawl:
     name: Algolia Recrawl
     runs-on: ubuntu-latest
     steps:
@@ -13,12 +12,18 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
 
-      - name: Algolia crawler creation and crawl
+      # We don't know when the site will be deployed, we just wait a few seconds
+      # Better solutions can be found
+      - name: Sleep for 30s
+        run: sleep 30
+
+      - name: Github-pages-MAIN => Algolia crawler creation and recrawl (Push on Main branch)
         uses: algolia/algoliasearch-crawler-github-actions@v1
-        id: algolia_crawler
-        with: # mandatory parameters
+        id: crawler_push
+        with:
           crawler-user-id: "77adda69-9bf8-464c-8290-509ea3ccaedd"
           crawler-api-key: "2271cb8646ebe78188b96fba4008e0ad"
           algolia-app-id: "QJ2QB6FCE5"
           algolia-api-key: "636c5f8d218f77cc2f87c81fbd95a9b8"
-          site-url: "https://cybozu-sd.github.io/kuc-docusaurus-v2/"
+          site-url: "https://community.algolia.com/algoliasearch-crawler-github-actions/public/github-pages/"
+          override-config: true
