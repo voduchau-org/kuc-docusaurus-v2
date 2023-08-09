@@ -1,13 +1,21 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+name: Deployment Workflow A
+
+on:
+  push:
+    branches:
+      - test-co # Adjust this to your main branch
+
 jobs:
-  check-bats-version:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      # Deployment steps here
+      - name: Sleep for 60s
+        run: sleep 60
+
+      - name: Trigger Workflow B
+        uses: actions/workflow_run@v2
         with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+          workflow: Github Pages -> Algolia Crawler # Replace with the name of your b.yml workflow
+          token: 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
