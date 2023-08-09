@@ -25,4 +25,5 @@ jobs:
           crawler-api-key: "b891226f5e335e1d0307819a93b3a7c7"
           algolia-app-id: "QJ2QB6FCE5"
           algolia-api-key: "636c5f8d218f77cc2f87c81fbd95a9b8"
+          crawler-name: "kuc-usaurus-v2"
           site-url: "https://cybozu-sd.github.io"
