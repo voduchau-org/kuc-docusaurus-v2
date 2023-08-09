@@ -1,0 +1,21 @@
+name: Deploy Document Workflow
+
+on:
+  push:
+    branches:
+      - test-co # Adjust this to your main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Deployment steps here
+      - name: Sleep for 60s
+        run: sleep 80
+
+      - name: Trigger Workflow B
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: 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
+          event-type: trigger-b-workflow
